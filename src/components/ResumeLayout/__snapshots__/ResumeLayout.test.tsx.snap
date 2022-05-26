@@ -206,6 +206,20 @@ exports[`<ResumeLayout /> Matches the snapshot 1`] = `
                     Somewhere Only We Know
                   </div>
                 </div>
+                <div
+                  class="Row_rowStyle__p6dtm90"
+                >
+                  <div
+                    class="Column_columnStyle__1y78ssd0 Column_xsColumnsStyle_auto__1y78ssdd"
+                  >
+                    <strong>
+                      E-mail:
+                    </strong>
+                  </div>
+                  <div
+                    class="Column_columnStyle__1y78ssd0"
+                  />
+                </div>
               </li>
             </ul>
           </article>
@@ -562,7 +576,7 @@ exports[`<ResumeLayout /> Matches the snapshot 1`] = `
               </g>
             </svg>
           </span>
-          Hobbies & Interests
+          Awards & Featured Projects
         </h3>
         <div>
           <div>
@@ -630,7 +644,7 @@ exports[`<ResumeLayout /> Matches the snapshot 1`] = `
       </div>
       <div>
         <small>
-          This résumé was generated with
+          This CV was built with
            
           <a
             class="Footer_footerLinkStyle__1jkfoa51"
@@ -651,17 +665,7 @@ exports[`<ResumeLayout /> Matches the snapshot 1`] = `
           >
             Vercel
           </a>
-          . Learn how to deploy your own resume with the
-           
-          <a
-            class="Footer_footerLinkStyle__1jkfoa51"
-            href="https://github.com/colinhemphill/nextjs-resume-generator"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            nextjs-resume-generator
-          </a>
-          !
+          .
         </small>
       </div>
     </div>
