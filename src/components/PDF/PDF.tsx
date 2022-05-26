@@ -50,12 +50,12 @@ Font.register({
 
 const sidebarWidth = 2.75;
 const fontSizes = {
-  xl: 20,
-  l: 18,
-  m: 16,
-  s: 14,
-  xs: 12,
-  xxs: 10,
+  xl: 18,
+  l: 16,
+  m: 14,
+  s: 12,
+  xs: 10,
+  xxs: 8,
 };
 
 const styles = StyleSheet.create({
@@ -249,17 +249,6 @@ const PDF: React.FC<ResumePageProps> = (props) => {
               {skills.map((skill, skillIndex) => (
                 <View key={skill.slug}>
                   <View style={styles.itemHeading}>
-                    <View style={styles.sectionHeadingStars}>
-                      {Array.from(Array(skills.length - skillIndex)).map(
-                        (star, starIndex) => (
-                          <Image
-                            key={starIndex}
-                            src={`${iconPath}/star-yellow.png`}
-                            style={styles.sectionHeadingStar}
-                          />
-                        ),
-                      )}
-                    </View>
                     <Text style={styles.bold}>{skill.attributes.title}</Text>
                   </View>
                   <Html {...htmlProps}>{skill.html}</Html>
@@ -337,7 +326,7 @@ const PDF: React.FC<ResumePageProps> = (props) => {
                 src={`${iconPath}/circle-pen-paintbrush.png`}
                 style={styles.sectionHeadingIcon}
               />
-              <Text>Hobbies &amp; Interests</Text>
+              <Text>Awards &amp; Featured Projects</Text>
             </View>
             <Html
               {...htmlProps}
