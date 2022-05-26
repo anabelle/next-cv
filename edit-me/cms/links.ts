@@ -23,7 +23,7 @@ export const links: CMSLink[] = [
   },
 
   {
-    href: 'https://twitter.com',
+    href: 'https://twitter.com/heyanabelle',
     iconName: 'twitter',
     title: 'Twitter',
   },
