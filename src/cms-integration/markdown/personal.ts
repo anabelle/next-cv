@@ -10,6 +10,7 @@ export interface PersonalMarkdownAttributes {
   givenName: string;
   title?: string;
   twitterUsername?: string;
+  email?: string;
 }
 
 export interface CMSPersonalInformation {

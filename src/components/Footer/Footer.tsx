@@ -58,7 +58,7 @@ const Footer: React.FC<FooterProps> = (props) => {
 
         <div>
           <small>
-            This résumé was generated with{' '}
+            This CV was built with{' '}
             <a
               className={footerLinkStyle}
               href="https://nextjs.org/"
@@ -76,16 +76,7 @@ const Footer: React.FC<FooterProps> = (props) => {
             >
               Vercel
             </a>
-            . Learn how to deploy your own resume with the{' '}
-            <a
-              className={footerLinkStyle}
-              href="https://github.com/colinhemphill/nextjs-resume-generator"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              nextjs-resume-generator
-            </a>
-            !
+            .
           </small>
         </div>
       </Container>

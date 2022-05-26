@@ -10,7 +10,7 @@ interface HobbiesAndInterestsProps {
 const HobbiesAndInterests: React.FC<HobbiesAndInterestsProps> = (props) => {
   return (
     <article>
-      <SectionHeader icon={faDiceD20} text="Hobbies &amp; Interests" />
+      <SectionHeader icon={faDiceD20} text="Awards &amp; Featured Projects" />
       <div dangerouslySetInnerHTML={{ __html: props.hobbies.html }} />
     </article>
   );

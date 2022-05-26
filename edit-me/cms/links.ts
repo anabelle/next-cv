@@ -2,24 +2,19 @@ import { CMSLink } from '../../src/cms-integration/markdown/links';
 
 export const links: CMSLink[] = [
   {
-    href: 'https://github.com',
+    href: 'https://github.com/anabelle',
     iconName: 'github',
     title: 'GitHub',
   },
   {
-    href: 'https://www.instagram.com',
+    href: 'https://www.instagram.com/heyanabelle',
     iconName: 'instagram',
     title: 'Instagram',
   },
   {
-    href: 'https://www.linkedin.com',
+    href: 'https://www.linkedin.com/in/heyanabelle/',
     iconName: 'linkedin',
     title: 'LinkedIn',
-  },
-  {
-    href: 'https://www.npmjs.com',
-    iconName: 'npm',
-    title: 'NPM',
   },
 
   {
