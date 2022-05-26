@@ -14,13 +14,7 @@ const Star: React.FC<{ className?: string }> = ({ className }) => {
 const StarRating: React.FC<StarRatingProps> = (props) => {
   const { stars } = props;
 
-  return (
-    <span>
-      {stars >= 1 && <Star />}
-      {stars >= 2 && <Star />}
-      {stars >= 3 && <Star />}
-    </span>
-  );
+  return <span></span>;
 };
 
 export default StarRating;
