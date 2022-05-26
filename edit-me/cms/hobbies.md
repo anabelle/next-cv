@@ -1,32 +1,32 @@
-Reconocimiento Clemente Manuel Zabala del Premio Gabo 2020
+**Reconocimiento Clemente Manuel Zabala del Premio Gabo 2020**
 
-- cerosetenta.uniandes.edu.co
+- [cerosetenta.uniandes.edu.co](https://cerosetenta.uniandes.edu.co)
 
-Brutalists websites mention honor.
+**Brutalists websites mention of honor**
 
-- montenegrojaramillo.info in brutalistwebsites.com
+- [montenegrojaramillo.info](https://montenegrojaramillo.info) in [brutalistwebsites.com](https://brutalistwebsites.com)
 
-45 Salón Nacional de Artistas
+**45 Salón Nacional de Artistas**
 
-- First interactive digital art exhibition at 45sna.com
+- First interactive digital art exhibition at [45sna.com](https://45sna.com)
 
-Data Visualization for Governmenttransparency
+**Data Visualization for Governmenttransparency**
 
-- pautavisible.org
+- [pautavisible.org](https://pautavisible.org)
 
-Diversity and social journalism
+**Diversity and social journalism**
 
-- sentiido.com
-- volcanicas.com
-- consonante.org
-- journalistsprotection.org
+- [sentiido.com](https://sentiido.com)
+- [volcanicas.com](https://volcanicas.com)
+- [consonante.org](https://consonante.org)
+- [journalistsprotection.org](https://journalistsprotection.org)
 
-Digital and interactive art
+**Digital and interactive art**
 
-- promesaspromesas.com
-- ruidosaruidosa.com
-- permitidorayar.com
-- museolatertulia.com
-- elorigendelanoche.unal.edu.co
+- [promesaspromesas.com](https://promesaspromesas.com)
+- [ruidosaruidosa.com](https://ruidosaruidosa.com)
+- [permitidorayar.com](https://permitidorayar.com)
+- [museolatertulia.com](https://museolatertulia.com)
+- [elorigendelanoche.unal.edu.co](https://elorigendelanoche.unal.edu.co)
 
-And many more that can be seen at 8manos.com/trabajo and lagentedelcomun.info
+And many more that can be seen at [8manos.com/trabajo](https://8manos.com/trabajo) and [lagentedelcomun.info](https://lagentedelcomun.info)
