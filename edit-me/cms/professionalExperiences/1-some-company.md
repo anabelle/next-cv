@@ -1,6 +1,6 @@
 ---
 organization: La Gente Del Común
-startDate: JAN 2017
+startDate: JUN 2013
 endDate: PRESENT
 title: Web Developer
 ---
