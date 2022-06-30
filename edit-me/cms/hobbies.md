@@ -14,7 +14,7 @@
 
 - First interactive digital art exhibition at [45sna.com](https://45sna.com)
 
-**Data Visualization for Governmenttransparency**
+**Data Visualization for Government transparency**
 
 - [pautavisible.org](https://pautavisible.org)
 
