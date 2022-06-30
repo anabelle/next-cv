@@ -1,5 +1,5 @@
 ---
-endDate: PRESENT
+endDate: JUN 2022
 organization: 8manos S.A.S
 startDate: SEPT 2010
 title: Founder and Manager
