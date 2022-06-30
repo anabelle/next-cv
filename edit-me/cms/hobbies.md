@@ -2,6 +2,10 @@
 
 - [cerosetenta.uniandes.edu.co](https://cerosetenta.uniandes.edu.co)
 
+**Premio Lápiz de Acero al Mejor Sitio Web 2015**
+
+- [cerosetenta.uniandes.edu.co](https://cerosetenta.uniandes.edu.co/nos-ganamos-el-lapiz-de-acero/)
+
 **Brutalists websites mention of honor**
 
 - [montenegrojaramillo.info](https://montenegrojaramillo.info) in [brutalistwebsites.com](https://brutalistwebsites.com)
