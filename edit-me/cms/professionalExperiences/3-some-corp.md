@@ -5,6 +5,4 @@ startDate: JUN 2022
 title: Senior Front-End Engineer
 ---
 
-The Senior Front-End Engineer (SFE) is responsible for designing and writing code and providing support to web applications. The SFE is able to work independently, assuming ownership for the design, interface and programming of simple and complex websites. The SFE should also be able to provide estimates for tasks and assume ownership for these estimates.
-
-The SFE works with web applications and a variety of front-end technologies including HTML5, CSS and JavaScript, and is comfortable with content management systems.
+As a Senior Front-End Engineer at Publicis Groupe, the world's largest advertising agency, I have successfully developed world-class user interfaces that adhere to AA accessibility, legal, and security standards for major global brands, including Publicis Global Delivery, Bridgestone, Adobe, and PepsiCo. Additionally, I serve on the leadership team for the PGD OnChain community within the organization, promoting innovation and nurturing talent in emerging technologies such as Blockchain Technology, Web3, Smart Contracts, and various Metaverses.
