@@ -12,7 +12,7 @@
 
 **45 Salón Nacional de Artistas**
 
-- First interactive digital art exhibition at [45sna.com](https://45sna.com)
+- First interactive digital art exhibition at [45sna.com](https://45sna.lagentedelcomun.info)
 
 **Data Visualization for Government transparency**
 
