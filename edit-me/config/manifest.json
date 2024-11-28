@@ -1,5 +1,5 @@
 {
-  "name": "Some Body's Professional Résumé",
+  "name": "Anabelle Handdoek's Professional Portfolio",
   "short_name": "Anabelle Handdoek",
   "icons": [
     {
@@ -8,9 +8,9 @@
       "sizes": "512x512"
     }
   ],
-  "background_color": "#18181b",
-  "description": "Your professional description.",
+  "background_color": "#ffffff",
+  "description": "Full stack developer with a passion for creating innovative solutions.",
   "display": "fullscreen",
   "start_url": "/",
-  "theme_color": "#0073e6"
+  "theme_color": "#6400e6"
 }
