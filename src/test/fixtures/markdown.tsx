@@ -1,5 +1,5 @@
 import { CMSEducationalExperience } from '../../cms-integration/markdown/educational';
-import { CMSHobbies } from '../../cms-integration/markdown/hobbies';
+import { CMSNotableProjects } from '../../cms-integration/markdown/notable-projects';
 import { CMSLink } from '../../cms-integration/markdown/links';
 import { CMSPersonalInformation } from '../../cms-integration/markdown/personal';
 import { CMSProfessionalExperience } from '../../cms-integration/markdown/professional';
@@ -58,4 +58,4 @@ export const skills: CMSSkillCategory[] = [
   },
 ];
 
-export const hobbies: CMSHobbies = { html: '<div>Test</div>' };
+export const notableProjects: CMSNotableProjects = { html: '<div>Test</div>' };

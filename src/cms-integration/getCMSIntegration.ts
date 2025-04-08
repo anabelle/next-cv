@@ -1,5 +1,5 @@
 import { getEducationalExperiences } from './markdown/educational';
-import { getHobbies } from './markdown/hobbies';
+import { getNotableProjects } from './markdown/notable-projects';
 import { getLinks } from './markdown/links';
 import { getPersonalInformation } from './markdown/personal';
 import { getProfessionalExperiences } from './markdown/professional';
@@ -11,7 +11,7 @@ const getCMSIntegration = async (cms: CMS) => {
   if (cms === 'markdown') {
     return {
       education: await getEducationalExperiences(),
-      hobbies: await getHobbies(),
+      notableProjects: await getNotableProjects(),
       links: await getLinks(),
       personalInformation: await getPersonalInformation(),
       professional: await getProfessionalExperiences(),

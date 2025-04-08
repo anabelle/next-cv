@@ -185,7 +185,7 @@ const htmlProps: Omit<HtmlProps, 'children'> = {
 const PDF: React.FC<ResumePageProps> = (props) => {
   const {
     education,
-    hobbies,
+    notableProjects,
     personalInformation,
     privateInformation,
     professional,
@@ -335,7 +335,7 @@ const PDF: React.FC<ResumePageProps> = (props) => {
                 p: { marginBottom: spacers[1] },
               }}
             >
-              {hobbies.html}
+              {notableProjects.html}
             </Html>
           </View>
         </View>

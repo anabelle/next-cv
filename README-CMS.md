@@ -61,11 +61,11 @@ A series of Markdown files at `edit-me/cms/educationalExperiences`. You can use 
 
 The markdown content will be rendered as HTML to display a description of each education experience.
 
-### Hobbies
+### Notable Projects
 
-A single Markdown file at `edit-me/cms/hobbies.md`.
+A single Markdown file at `edit-me/cms/notable-projects.md`.
 
-The markdown content will be rendered as HTML to display a freeform description of your hobbies and personal interests.
+The markdown content will be rendered as HTML to display a freeform description of your notable projects, awards, and recognitions.
 
 ### Links
 

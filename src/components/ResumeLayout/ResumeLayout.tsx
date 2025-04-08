@@ -11,7 +11,7 @@ import Column from '../../strum-design-system/components/Layout/Column';
 import Row from '../../strum-design-system/components/Layout/Row';
 import AboutMe from '../Articles/AboutMe';
 import ContactInformation from '../Articles/ContactInformation';
-import HobbiesAndInterests from '../Articles/HobbiesAndInterests';
+import NotableProjects from '../Articles/NotableProjects';
 import EducationItem from '../EducationItem/EducationItem';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
@@ -24,7 +24,7 @@ import Skills from '../Skills/Skills';
 const ResumeLayout: React.FC<ResumePageProps> = (props) => {
   const {
     education,
-    hobbies,
+    notableProjects,
     links,
     personalInformation,
     privateInformation,
@@ -82,7 +82,7 @@ const ResumeLayout: React.FC<ResumePageProps> = (props) => {
       </Section>
 
       <Section color="alternate">
-        <HobbiesAndInterests hobbies={hobbies} />
+        <NotableProjects notableProjects={notableProjects} />
       </Section>
 
       <Footer links={links} personalInformation={personalInformation} />

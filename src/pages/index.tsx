@@ -7,7 +7,7 @@ import ResumeLayout from '../components/ResumeLayout/ResumeLayout';
 export const getStaticProps = async () => {
   const {
     education,
-    hobbies,
+    notableProjects,
     links,
     personalInformation,
     professional,
@@ -17,7 +17,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       education,
-      hobbies,
+      notableProjects,
       links,
       personalInformation,
       professional,

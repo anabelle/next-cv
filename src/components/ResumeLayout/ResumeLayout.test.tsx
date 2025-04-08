@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   educationalExperiences,
-  hobbies,
+  notableProjects,
   links,
   personalInformation,
   professionalExperiences,
@@ -21,7 +21,7 @@ describe('<ResumeLayout />', () => {
     const { container } = render(
       <ResumeLayout
         education={educationalExperiences}
-        hobbies={hobbies}
+        notableProjects={notableProjects}
         links={links}
         personalInformation={personalInformation}
         professional={professionalExperiences}
