@@ -2,10 +2,7 @@
 
 exports[`Button matches snapshot with specific props 1`] = `
 <button
-  class="mock-atoms-class"
-  data-color="medium"
-  data-has-atoms="true"
-  data-size="sm"
+  class="mock-atoms-class mock-button-style-class"
   data-testid="mock-button"
 >
   Snapshot Button

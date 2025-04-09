@@ -3,9 +3,11 @@ import { render, screen } from '@testing-library/react';
 import ProfessionalItem from './ProfessionalItem';
 import { type CMSProfessionalExperience } from '../../cms-integration/markdown/professional';
 
-// Mock FontAwesomeIcon
+// Mock FontAwesomeIcon to be findable
 jest.mock('@fortawesome/react-fontawesome', () => ({
-  FontAwesomeIcon: (props) => <i data-testid="calendar-icon"></i>,
+  FontAwesomeIcon: (props) => (
+    <i data-testid="calendar-icon" aria-label="calendar icon"></i>
+  ),
 }));
 
 describe('ProfessionalItem', () => {
@@ -29,21 +31,25 @@ describe('ProfessionalItem', () => {
     };
     render(<ProfessionalItem {...propsWithEndDate} />);
 
-    // Check for the mock component
-    expect(screen.getByTestId('professional-item-mock')).toBeInTheDocument();
-    expect(screen.getByTestId('professional-item-mock')).toHaveTextContent(
-      `Professional: ${propsWithEndDate.slug}`,
+    // Check for actual rendered content
+    expect(screen.getByRole('heading', { level: 4 })).toHaveTextContent(
+      /Tester.*at Test Corp/,
     );
+    expect(screen.getByText(/Jan 2020.*Dec 2022/)).toBeInTheDocument();
+    expect(screen.getByTestId('calendar-icon')).toBeInTheDocument();
+    expect(screen.getByText('Tested things.')).toBeInTheDocument(); // Check for HTML content rendered
   });
 
   it('should render correctly without an end date', () => {
     // Use mockPropsBase which doesn't have endDate
     render(<ProfessionalItem {...mockPropsBase} />);
 
-    // Check for the mock component
-    expect(screen.getByTestId('professional-item-mock')).toBeInTheDocument();
-    expect(screen.getByTestId('professional-item-mock')).toHaveTextContent(
-      `Professional: ${mockPropsBase.slug}`,
+    // Check for actual rendered content
+    expect(screen.getByRole('heading', { level: 4 })).toHaveTextContent(
+      /Tester.*at Test Corp/,
     );
+    expect(screen.getByText(/Jan 2020.*Current/)).toBeInTheDocument();
+    expect(screen.getByTestId('calendar-icon')).toBeInTheDocument();
+    expect(screen.getByText('Tested things.')).toBeInTheDocument(); // Check for HTML content rendered
   });
 });

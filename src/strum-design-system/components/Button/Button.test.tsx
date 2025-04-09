@@ -2,9 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import Button from './Button';
-
-// Import mocked atoms from our test utils instead of actual implementation
-import { atoms } from '../../../test/mocks/styleMocks';
+import { atoms } from '../../sprinkles.css';
 
 describe('Button', () => {
   it('should render with default props', () => {
@@ -42,11 +40,16 @@ describe('Button', () => {
   });
 
   it('should apply atomic properties (atoms)', () => {
-    const className = 'mock-atoms-class'; // Use mock class instead of real atoms
-    render(<Button atoms={{ marginTop: 4 }}>Atomic Button</Button>);
+    const atomicProps = {}; // Use empty object - mock handles the class logic
+    const atomClassName = 'mock-atoms-class'; // This is what mockAtomsFn returns
+    const buttonStyleClass = 'mock-button-style-class'; // This is what buttonStyle mock returns
+
+    render(<Button atoms={atomicProps}>Atomic Button</Button>);
     const button = screen.getByRole('button', { name: /atomic button/i });
     expect(button).toBeInTheDocument();
-    expect(button.className).toContain(className);
+    // Check for both classes since composeWithAtoms joins them
+    expect(button).toHaveClass(atomClassName);
+    expect(button).toHaveClass(buttonStyleClass);
   });
 
   it('should pass through standard button attributes', () => {
@@ -71,10 +74,20 @@ describe('Button', () => {
   // Add snapshot test as a fallback for complex style checks
   it('matches snapshot with specific props', () => {
     const { container } = render(
-      <Button color="medium" size="sm" atoms={{ padding: 3 }}>
+      <Button color="medium" size="sm" data-testid="mock-button">
         Snapshot Button
       </Button>,
     );
     expect(container.firstChild).toMatchSnapshot();
   });
 });
+
+// Update snapshot: Button matches snapshot with specific props 1
+exports[`Button matches snapshot with specific props 1`] = `
+<button
+  class="mock-atoms-class mock-button-style-class"
+  data-testid="mock-button"
+>
+  Snapshot Button
+</button>
+`;

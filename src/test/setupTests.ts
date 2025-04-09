@@ -1,109 +1,68 @@
 import '@vanilla-extract/css/disableRuntimeStyles';
 import '@testing-library/jest-dom';
-import * as React from 'react';
-import * as styleMocks from './mocks/styleMocks';
+import * as mockReact from 'react';
+import * as mockStyleMocks from './mocks/styleMocks';
 
-// Mock the entire Button component
-jest.mock('../strum-design-system/components/Button/Button', () => {
-  return {
-    __esModule: true,
-    default: require('./mocks/ButtonMock').default,
+// --- Define mockAtomsFn first ---
+// Define a type for the mock function including the 'properties' field
+interface MockAtomsFn extends jest.Mock<string, [any]> {
+  properties: {
+    has: jest.Mock<boolean, [any]>;
   };
-});
+}
+// Create the mock function and assert its type via unknown
+const mockAtomsFn = jest.fn(() => 'mock-atoms-class') as unknown as MockAtomsFn;
+// Assign the properties object
+mockAtomsFn.properties = {
+  has: jest.fn((key) => true), // Simplistic mock
+};
 
-// Mock Section component
-jest.mock('../components/Section/Section', () => {
-  return {
-    __esModule: true,
-    default: require('./mocks/SectionMock').default,
-  };
-});
-
-// Mock Row component
-jest.mock('../strum-design-system/components/Layout/Row', () => {
-  return {
-    __esModule: true,
-    default: require('./mocks/RowMock').default,
-  };
-});
-
-// Mock Alert component used in ErrorBoundary
-jest.mock('../strum-design-system/components/Alert/Alert', () => {
-  const AlertMock = ({
-    children,
-    color,
-  }: {
-    children: React.ReactNode;
-    color?: string;
-  }) =>
-    React.createElement(
-      'div',
-      { 'data-testid': 'alert-mock', 'data-color': color || 'neutral' },
-      children,
-    );
-  return { __esModule: true, default: AlertMock };
-});
-
-// Mock CSS modules more comprehensively
+// --- Mock sprinkles.css using mockAtomsFn ---
 jest.mock('../strum-design-system/sprinkles.css', () => ({
-  atoms: styleMocks.atoms,
-  Atoms: {},
+  atoms: mockAtomsFn,
+  Atoms: {}, // Keep existing type mock
   mapResponsiveValue: jest.fn((value) => value),
 }));
 
 // Mock Button.css
 jest.mock('../strum-design-system/components/Button/Button.css', () => ({
-  buttonStyle: styleMocks.buttonStyle,
+  buttonStyle: jest.fn(() => 'mock-button-style-class'),
 }));
 
 // Mock Row.css
 jest.mock('../strum-design-system/components/Layout/Row.css', () => ({
-  rowStyle: styleMocks.rowStyle,
+  rowStyle: jest.fn(() => 'mock-row-style-class'),
   rowBase: {},
 }));
 
-// Mock Section.css
-jest.mock('../strum-design-system/components/Layout/Section.css', () => ({
-  sectionStyle: styleMocks.sectionStyle,
+// Mock Column.css
+jest.mock('../strum-design-system/components/Layout/Column.css', () => ({
+  columnStyle: 'mock-column-style-base',
+  xsColumnsStyle: {
+    auto: 'mock-col-xs-auto',
+    12: 'mock-col-xs-12' /* Add others if needed */,
+  },
+  smColumnsStyle: {
+    auto: 'mock-col-sm-auto',
+    12: 'mock-col-sm-12' /* Add others if needed */,
+  },
+  mdColumnsStyle: { auto: 'mock-col-md-auto' /* Add others if needed */ },
+  lgColumnsStyle: {
+    auto: 'mock-col-lg-auto',
+    4: 'mock-col-lg-4',
+    6: 'mock-col-lg-6' /* Add others if needed */,
+  },
+  xlColumnsStyle: { auto: 'mock-col-xl-auto' /* Add others if needed */ },
+  xxlColumnsStyle: { auto: 'mock-col-xxl-auto' /* Add others if needed */ },
 }));
 
-// Mock PDFDownloadButton component
-jest.mock('../components/PDF/PDFDownloadButton', () => {
-  const PDFDownloadButtonMock = ({ secret }: { secret?: string }) =>
-    React.createElement(
-      'a',
-      {
-        'data-testid': 'pdf-download-button-mock',
-        href: secret ? `/api/pdf?secret=${secret}` : '/api/pdf',
-        target: '_blank',
-      },
-      'View or Download PDF',
-    );
-  return { __esModule: true, default: PDFDownloadButtonMock };
-});
-
-// Mock Layout components used in ResumeLayout
-jest.mock('../strum-design-system/components/Layout/Column', () => {
-  const ColumnMock = ({ children }: { children: React.ReactNode }) =>
-    React.createElement('div', { 'data-testid': 'column-mock' }, children);
-  return { __esModule: true, default: ColumnMock };
-});
-
-jest.mock('../components/Section/Section', () => {
-  const SectionMock = ({
-    children,
-    color,
-  }: {
-    children: React.ReactNode;
-    color?: string;
-  }) =>
-    React.createElement(
-      'section',
-      { 'data-testid': 'section-mock', 'data-color': color || 'standard' },
-      children,
-    );
-  return { __esModule: true, default: SectionMock };
-});
+// Mock Section.css - Adjust path and make it an object for color variants
+jest.mock('../components/Section/Section.css', () => ({
+  sectionStyle: {
+    standard: 'mock-section-standard',
+    alternate: 'mock-section-alternate',
+  },
+}));
 
 // Mock Footer.css
 jest.mock('../components/Footer/Footer.css', () => ({
@@ -111,190 +70,90 @@ jest.mock('../components/Footer/Footer.css', () => ({
   footerLinkStyle: 'mock-footer-link-style',
 }));
 
-// Mock Footer component
-jest.mock('../components/Footer/Footer', () => {
-  const FooterMock = (props: any) =>
-    React.createElement(
-      'footer',
-      { 'data-testid': 'footer-mock' },
-      'Mock Footer',
-    );
-  return { __esModule: true, default: FooterMock };
-});
-
-// Mock Header component
-jest.mock('../components/Header/Header', () => {
-  const HeaderMock = (props: any) =>
-    React.createElement(
-      'header',
-      { 'data-testid': 'header-mock' },
-      'Mock Header',
-    );
-  return { __esModule: true, default: HeaderMock };
-});
-
-// Mock SectionHeader component
-jest.mock('../components/SectionHeader/SectionHeader', () => {
-  const SectionHeaderMock = ({ text }: { text: string; icon: any }) =>
-    React.createElement('div', { 'data-testid': 'section-header-mock' }, text);
-  return { __esModule: true, default: SectionHeaderMock };
-});
-
-// Mock other major components used in ResumeLayout
-jest.mock('../components/Articles/AboutMe', () => {
-  const AboutMeMock = (props: any) =>
-    React.createElement(
-      'div',
-      { 'data-testid': 'about-me-mock' },
-      'About Me Content',
-    );
-  return { __esModule: true, default: AboutMeMock };
-});
-
-jest.mock('../components/Articles/ContactInformation', () => {
-  const ContactInfoMock = (props: any) =>
-    React.createElement(
-      'div',
-      { 'data-testid': 'contact-info-mock' },
-      'Contact Info Content',
-    );
-  return { __esModule: true, default: ContactInfoMock };
-});
-
-jest.mock('../components/Articles/NotableProjects', () => {
-  const ProjectsMock = (props: any) =>
-    React.createElement(
-      'div',
-      { 'data-testid': 'projects-mock' },
-      'Projects Content',
-    );
-  return { __esModule: true, default: ProjectsMock };
-});
-
-jest.mock('../components/Skills/Skills', () => {
-  const SkillsMock = (props: any) =>
-    React.createElement(
-      'div',
-      { 'data-testid': 'skills-mock' },
-      'Skills Content',
-    );
-  return { __esModule: true, default: SkillsMock };
-});
-
-jest.mock('../components/EducationItem/EducationItem', () => {
-  const EducationItemMock = (props: any) =>
-    React.createElement(
-      'div',
-      { 'data-testid': 'education-item-mock' },
-      `Education: ${props.slug || 'mock'}`,
-    );
-  return { __esModule: true, default: EducationItemMock };
-});
-
-jest.mock('../components/ProfessionalItem/ProfessionalItem', () => {
-  const ProfessionalItemMock = (props: any) =>
-    React.createElement(
-      'div',
-      { 'data-testid': 'professional-item-mock' },
-      `Professional: ${props.slug || 'mock'}`,
-    );
-  return { __esModule: true, default: ProfessionalItemMock };
-});
-
-// Mock AutoGrid components
-jest.mock('../strum-design-system/components/AutoGrid/AutoGrid', () => {
-  const AutoGridMock = ({ children }: { children: React.ReactNode }) =>
-    React.createElement('div', { 'data-testid': 'auto-grid-mock' }, children);
-  return { __esModule: true, default: AutoGridMock };
-});
-
-jest.mock('../strum-design-system/components/AutoGrid/AutoGridCell', () => {
-  const AutoGridCellMock = ({ children }: { children: React.ReactNode }) =>
-    React.createElement(
-      'div',
-      { 'data-testid': 'auto-grid-cell-mock' },
-      children,
-    );
-  return { __esModule: true, default: AutoGridCellMock };
-});
-
-// Mock Box component
-jest.mock('../strum-design-system/components/Box/Box', () => {
-  const BoxMock = ({ children }: { children: React.ReactNode }) =>
-    React.createElement('div', { 'data-testid': 'box-mock' }, children);
-  return { __esModule: true, default: BoxMock };
-});
-
-// Mock PageHead component
-jest.mock('../components/PageHead', () => {
-  const PageHeadMock = () => null;
-  return { __esModule: true, default: PageHeadMock };
-});
-
-// Mock Container component
-jest.mock('../strum-design-system/components/Container/Container', () => {
-  const ContainerMock = ({ children }: { children: React.ReactNode }) =>
-    React.createElement('div', { 'data-testid': 'container-mock' }, children);
-  return { __esModule: true, default: ContainerMock };
-});
-
-// Mock utils/compose
+// --- Mock utils/compose using mockAtomsFn ---
 jest.mock('../strum-design-system/utils/compose', () => ({
   composeStyles: jest.fn((...args) => args.filter(Boolean).join(' ')),
-  composeWithAtoms: styleMocks.composeWithAtoms,
+  // Mock composeWithAtoms to join classes passed to it
+  composeWithAtoms: jest.fn((atomicProps, ...otherClasses) => {
+    const atomClass = mockAtomsFn(atomicProps);
+    return [atomClass, ...otherClasses.flat()].filter(Boolean).join(' ');
+  }),
   compose: jest.fn((fns) => (args) => args),
 }));
 
 // Mock themes
 jest.mock('../strum-design-system/themes/contract.css', () => ({
-  vars: styleMocks.vars,
+  vars: mockStyleMocks.vars,
 }));
-
-// Mock timbre colors
-jest.mock('../strum-design-system/themes/timbre/colors', () => ({
-  __esModule: true,
-  default: {
-    primary: '#000',
-    secondary: '#fff',
-    black: '#000',
-    dark: '#333',
-    medium: '#666',
-    light: '#ccc',
-    white: '#fff',
+jest.mock('../strum-design-system/themes/themeUtils', () => ({
+  getVarName: jest.fn((value) => `--mock-${value}`),
+  assignInlineVars: jest.fn((vars) => ({ style: vars })),
+  getModeColors: jest.fn(() => ({
+    /* return simple mock object if needed */
+  })),
+}));
+jest.mock('../strum-design-system/themes', () => ({
+  timbre: {
+    contract: { vars: mockStyleMocks.vars },
+    modes: { light: 'light-mode', dark: 'dark-mode' },
   },
 }));
 
-// Mock accessibility styles
-jest.mock('../strum-design-system/styles/accessibility.css', () => ({
-  visuallyHidden: 'mock-visually-hidden',
-}));
-
-// Mock other CSS files
-jest.mock('../strum-design-system/styles/borderRadius.css', () => ({
-  rounded: 'mock-rounded',
-  circleBorderRadius: 'mock-circle-border-radius',
-  roundedBorderRadius: 'mock-rounded-border-radius',
-}));
-
+// Mock next/router
 jest.mock('next/router', () => ({
   useRouter() {
     return {
       route: '/',
       pathname: '',
       query: '',
-      asPath: '/',
+      asPath: '',
+      push: jest.fn(),
+      events: {
+        on: jest.fn(),
+        off: jest.fn(),
+      },
+      beforePopState: jest.fn(() => null),
+      prefetch: jest.fn(() => null),
     };
   },
 }));
 
-// Mock FontAwesome icons
-jest.mock('@fortawesome/react-fontawesome', () => ({
-  FontAwesomeIcon: jest.fn().mockImplementation(({ icon, transform, color }) =>
-    React.createElement('i', {
-      className: Array.isArray(icon) ? icon.join('-') : icon,
-    }),
-  ),
+// Mock PageHead component (often involves Next.js specifics)
+jest.mock('../components/PageHead', () => {
+  const PageHeadMock = () => null; // Render nothing for PageHead in tests
+  return { __esModule: true, default: PageHeadMock };
+});
+
+// Mock FontAwesome setup
+jest.mock('../helpers/fontawesomeConfig', () => ({
+  // No actual implementation needed, just prevents errors
 }));
+jest.mock('@fortawesome/react-fontawesome', () => ({
+  FontAwesomeIcon: (props) => {
+    // Simple mock: renders icon name or a placeholder
+    return mockReact.createElement('i', {
+      className: `fa ${props.icon.iconName}`, // Use iconName if available
+      'data-testid': 'mock-fa-icon',
+    });
+  },
+}));
+
+// Mock Alert component used specifically in ErrorBoundary tests if needed elsewhere
+jest.mock('../strum-design-system/components/Alert/Alert', () => {
+  const AlertMock = ({
+    children,
+    color,
+  }: {
+    children: mockReact.ReactNode;
+    color?: string;
+  }) =>
+    mockReact.createElement(
+      'div',
+      { 'data-testid': 'alert-mock', 'data-color': color || 'neutral' },
+      children,
+    );
+  return { __esModule: true, default: AlertMock };
+});
 
 Object.defineProperty(window, 'matchMedia', {
   writable: true,

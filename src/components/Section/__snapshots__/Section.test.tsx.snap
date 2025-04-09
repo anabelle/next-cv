@@ -3,11 +3,14 @@
 exports[`<Section /> Matches the snapshot 1`] = `
 <div>
   <section
-    data-color="alternate"
-    data-testid="section-mock"
+    class="mock-section-alternate"
   >
-    <div>
-      Test
+    <div
+      class="mock-atoms-class Container_containerStyle__rjkhb01 Container_containerFluidStyle__rjkhb00 margin_mxAuto__1nlkou20 mock-atoms-class"
+    >
+      <div>
+        Test
+      </div>
     </div>
   </section>
 </div>

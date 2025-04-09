@@ -3,95 +3,257 @@
 exports[`<ResumeLayout /> Matches the snapshot 1`] = `
 <div>
   <header
-    data-testid="header-mock"
+    class="mock-atoms-class"
   >
-    Mock Header
+    <div
+      class="mock-atoms-class Container_containerStyle__rjkhb01 Container_containerFluidStyle__rjkhb00 margin_mxAuto__1nlkou20 mock-atoms-class"
+    >
+      <div
+        class="mock-atoms-class mock-row-style-class"
+      >
+        <div
+          class="mock-atoms-class mock-column-style-base"
+        >
+          <h1
+            class="mock-atoms-class Heading_headingStyleVariants_1__nbnubj1 Heading_headingBaseStyle__nbnubj0"
+          >
+            Some Body
+          </h1>
+          <h2
+            class="mock-atoms-class Heading_headingStyleVariants_2__nbnubj2 Heading_headingBaseStyle__nbnubj0"
+          >
+            Cool Person
+          </h2>
+        </div>
+        <div
+          class="mock-atoms-class mock-column-style-base mock-col-xs-12 mock-col-sm-12 mock-col-md-auto"
+        >
+          <a
+            class="mock-button-style-class"
+            href="/api/pdf"
+            target="_blank"
+          >
+            <i
+              class="fa file-pdf"
+              data-testid="mock-fa-icon"
+            />
+            View or Download PDF
+          </a>
+        </div>
+      </div>
+    </div>
   </header>
   <section
-    data-color="standard"
-    data-testid="section-mock"
+    class="mock-section-standard"
   >
     <div
-      data-gap="0"
-      data-testid="row-mock"
+      class="mock-atoms-class Container_containerStyle__rjkhb01 Container_containerFluidStyle__rjkhb00 margin_mxAuto__1nlkou20 mock-atoms-class"
     >
       <div
-        data-testid="column-mock"
+        class="mock-atoms-class mock-row-style-class"
       >
         <div
-          data-testid="about-me-mock"
+          class="mock-atoms-class mock-column-style-base mock-col-xs-12 mock-col-lg-6"
         >
-          About Me Content
+          <article
+            class="mock-atoms-class"
+          />
+        </div>
+        <div
+          class="mock-atoms-class mock-column-style-base mock-col-xs-12 mock-col-lg-6"
+        >
+          <article
+            class="mock-atoms-class"
+          />
         </div>
       </div>
       <div
-        data-testid="column-mock"
+        class="mock-atoms-class"
+      />
+    </div>
+  </section>
+  <section
+    class="mock-section-alternate"
+  >
+    <div
+      class="mock-atoms-class Container_containerStyle__rjkhb01 Container_containerFluidStyle__rjkhb00 margin_mxAuto__1nlkou20 mock-atoms-class"
+    >
+      <div
+        class="mock-atoms-class"
+      />
+      <article
+        class="article_articleStyle__on6lov0"
       >
-        <div
-          data-testid="contact-info-mock"
+        <h4
+          class="mock-atoms-class Heading_headingStyleVariants_4__nbnubj4 Heading_headingBaseStyle__nbnubj0"
         >
-          Contact Info Content
+          <span
+            class="mock-atoms-class"
+          >
+            My Title
+          </span>
+           
+          at 
+          The Zebra
+        </h4>
+        <div>
+          <i
+            class="fa calendar"
+            data-testid="mock-fa-icon"
+          />
+          2018-02-15
+          –
+          Current
         </div>
-      </div>
-    </div>
-    <div
-      data-testid="skills-mock"
-    >
-      Skills Content
+        <div
+          class="mock-atoms-class"
+        >
+          <div>
+            Test
+          </div>
+        </div>
+      </article>
     </div>
   </section>
   <section
-    data-color="alternate"
-    data-testid="section-mock"
+    class="mock-section-standard"
   >
     <div
-      data-testid="box-mock"
+      class="mock-atoms-class Container_containerStyle__rjkhb01 Container_containerFluidStyle__rjkhb00 margin_mxAuto__1nlkou20 mock-atoms-class"
     >
       <div
-        data-testid="section-header-mock"
+        class="mock-atoms-class"
+      />
+      <article
+        class="article_articleStyle__on6lov0"
       >
-        Professional Experience
-      </div>
-    </div>
-    <div
-      data-testid="professional-item-mock"
-    >
-      Professional: test
+        <h4
+          class="mock-atoms-class Heading_headingStyleVariants_4__nbnubj4 Heading_headingBaseStyle__nbnubj0"
+        >
+          Degree
+        </h4>
+        <div>
+          <i
+            class="fa building-columns"
+            data-testid="mock-fa-icon"
+          />
+          Test School
+        </div>
+        <div>
+          <div>
+            Test
+          </div>
+        </div>
+      </article>
     </div>
   </section>
   <section
-    data-color="standard"
-    data-testid="section-mock"
+    class="mock-section-alternate"
   >
     <div
-      data-testid="box-mock"
+      class="mock-atoms-class Container_containerStyle__rjkhb01 Container_containerFluidStyle__rjkhb00 margin_mxAuto__1nlkou20 mock-atoms-class"
     >
-      <div
-        data-testid="section-header-mock"
-      >
-        Education
-      </div>
-    </div>
-    <div
-      data-testid="education-item-mock"
-    >
-      Education: test
-    </div>
-  </section>
-  <section
-    data-color="alternate"
-    data-testid="section-mock"
-  >
-    <div
-      data-testid="projects-mock"
-    >
-      Projects Content
+      <article>
+        <h3
+          class="mock-atoms-class Heading_headingStyleVariants_3__nbnubj3 Heading_headingBaseStyle__nbnubj0"
+        >
+          <span
+            class="mock-atoms-class fa-layers fa-fw"
+          >
+            <i
+              class="fa circle"
+              data-testid="mock-fa-icon"
+            />
+            <i
+              class="fa trophy"
+              data-testid="mock-fa-icon"
+            />
+          </span>
+          Awards & Featured Projects
+        </h3>
+        <div>
+          <div>
+            Test
+          </div>
+        </div>
+      </article>
     </div>
   </section>
   <footer
-    data-testid="footer-mock"
+    class="mock-footer-style"
   >
-    Mock Footer
+    <div
+      class="mock-atoms-class Container_containerStyle__rjkhb01 Container_containerFluidStyle__rjkhb00 margin_mxAuto__1nlkou20 mock-atoms-class"
+    >
+      <div
+        class="mock-atoms-class AutoGrid_autoGridStyle__1atju7c2 AutoGrid_autoGridStyle_horizontalAlign_center__1atju7c6 AutoGrid_autoGridXGuttersStyle_2__1atju7cf AutoGrid_autoGridYGuttersStyle_2__1atju7cs"
+      >
+        <div
+          class="mock-atoms-class AutoGridCell_autoGridCellStyle__1nerxdg0 mock-column-style-base"
+        >
+          <a
+            class="fa-3x"
+            href="https://github.com/colinhemphill"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <span
+              class="accessibility_visuallyHidden__pozwzn0"
+            >
+              Some
+               on 
+              GitHub
+            </span>
+            <span
+              class="fa-layers fa-fw"
+            >
+              <i
+                class="fa circle"
+                data-testid="mock-fa-icon"
+              />
+              <i
+                class="fa undefined"
+                data-testid="mock-fa-icon"
+              />
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        class="mock-atoms-class"
+      >
+        Copyright ©
+        2025
+         
+        Some Body
+      </div>
+      <div>
+        <small>
+          This CV was built with
+           
+          <a
+            class="mock-footer-link-style"
+            href="https://nextjs.org/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Next.js
+          </a>
+           
+          and deployed on
+           
+          <a
+            class="mock-footer-link-style"
+            href="https://vercel.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Vercel
+          </a>
+          .
+        </small>
+      </div>
+    </div>
   </footer>
 </div>
 `;
