@@ -14,7 +14,12 @@ const Star: React.FC<{ className?: string }> = ({ className }) => {
 const StarRating: React.FC<StarRatingProps> = (props) => {
   const { stars } = props;
 
-  return <span></span>;
+  // Create an array of stars based on the prop value
+  const starElements = Array.from({ length: stars }, (_, index) => (
+    <Star key={index} />
+  ));
+
+  return <span>{starElements}</span>;
 };
 
 export default StarRating;

@@ -1,12 +1,12 @@
 import React, { ButtonHTMLAttributes } from 'react';
 import { Atoms } from '../../sprinkles.css';
 import { composeWithAtoms } from '../../utils/compose';
-import { buttonStyle, ButtonVariants } from './Button.css';
+import { buttonStyle } from './Button.css';
 
 interface Button extends ButtonHTMLAttributes<HTMLButtonElement> {
   atoms?: Atoms;
-  color?: ButtonVariants['color'];
-  size?: ButtonVariants['size'];
+  color?: 'primary' | 'black' | 'dark' | 'light' | 'medium' | 'white';
+  size?: 'sm' | 'md' | 'lg' | 'xl';
 }
 
 const Button: React.FC<Button> = (props) => {

@@ -16,17 +16,17 @@ export interface CMSEducationalExperience {
   slug: string;
 }
 
-const basePath = process.cwd();
-const educationPath = path.join(
-  basePath,
-  'edit-me',
-  'cms',
-  'educationalExperiences',
-);
-
 export const getEducationalExperiences = async (): Promise<
   CMSEducationalExperience[]
 > => {
+  const basePath = process.cwd();
+  const educationPath = path.join(
+    basePath,
+    'edit-me',
+    'cms',
+    'educationalExperiences',
+  );
+
   const dir = (await fs.readdir(educationPath)).reverse();
   return Promise.all(
     dir.map(async (filename) => {

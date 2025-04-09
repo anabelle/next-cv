@@ -3,6 +3,7 @@ import fs from 'fs/promises';
 import { marked } from 'marked';
 import path from 'path';
 import invariant from 'tiny-invariant';
+import glob from 'glob';
 
 export interface SkillsMarkdownAttributes {
   title: string;
@@ -18,23 +19,26 @@ const basePath = process.cwd();
 const skillsPath = path.join(basePath, 'edit-me', 'cms', 'skills');
 
 export const getSkillCategories = async (): Promise<CMSSkillCategory[]> => {
-  const dir = await fs.readdir(skillsPath);
+  const files = glob.sync(path.join(skillsPath, '*.md'));
 
   return Promise.all(
-    dir.map(async (filename) => {
-      const file = await fs.readFile(path.join(skillsPath, filename));
+    files.map(async (filePath) => {
+      const fileContent = await fs.readFile(filePath);
       const { attributes, body } = parseFrontMatter<SkillsMarkdownAttributes>(
-        file.toString(),
+        fileContent.toString(),
       );
 
-      invariant(attributes?.title, `${filename} missing "title" attribute.`);
+      const filename = path.basename(filePath);
+      const slug = filename.replace(/\.md$/, '');
+
+      invariant(attributes?.title, `${slug} missing "title" attribute.`);
 
       const html = marked(body);
 
       return {
         attributes,
         html,
-        slug: filename.replace(/\.md$/, ''),
+        slug: slug,
       };
     }),
   );

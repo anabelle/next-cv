@@ -3,6 +3,7 @@ import fs from 'fs/promises';
 import { marked } from 'marked';
 import path from 'path';
 import invariant from 'tiny-invariant';
+import glob from 'glob';
 
 export interface PrivateInformationMarkdownAttributes {
   label: string;
@@ -25,23 +26,27 @@ const privateInformationPath = path.join(
 export const getPrivateInformation = async (): Promise<
   CMSPrivateInformation[]
 > => {
-  const dir = (await fs.readdir(privateInformationPath)).reverse();
-  return Promise.all(
-    dir.map(async (filename) => {
-      const file = await fs.readFile(
-        path.join(privateInformationPath, filename),
-      );
-      const { attributes, body } =
-        parseFrontMatter<PrivateInformationMarkdownAttributes>(file.toString());
+  const files = glob.sync(path.join(privateInformationPath, '*.md'));
 
-      invariant(attributes?.label, `${filename} missing "label" attribute.`);
+  return Promise.all(
+    files.map(async (filePath) => {
+      const fileContent = await fs.readFile(filePath);
+      const { attributes, body } =
+        parseFrontMatter<PrivateInformationMarkdownAttributes>(
+          fileContent.toString(),
+        );
+
+      const filename = path.basename(filePath);
+      const slug = filename.replace(/\.md$/, '');
+
+      invariant(attributes?.label, `${slug} missing "label" attribute.`);
 
       const html = marked(body);
 
       return {
         attributes,
         html,
-        slug: filename.replace(/\.md$/, ''),
+        slug: slug,
       };
     }),
   );

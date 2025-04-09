@@ -3,6 +3,7 @@ import fs from 'fs/promises';
 import { marked } from 'marked';
 import path from 'path';
 import invariant from 'tiny-invariant';
+import glob from 'glob';
 
 export interface ProfessionalExperienceMarkdownAttributes {
   organization: string;
@@ -28,31 +29,35 @@ const professionalPath = path.join(
 export const getProfessionalExperiences = async (): Promise<
   CMSProfessionalExperience[]
 > => {
-  const dir = (await fs.readdir(professionalPath)).reverse();
+  const files = glob.sync(path.join(professionalPath, '*.md'));
+
   return Promise.all(
-    dir.map(async (filename) => {
-      const file = await fs.readFile(path.join(professionalPath, filename));
+    files.map(async (filePath) => {
+      const fileContent = await fs.readFile(filePath);
       const { attributes, body } =
         parseFrontMatter<ProfessionalExperienceMarkdownAttributes>(
-          file.toString(),
+          fileContent.toString(),
         );
+
+      const filename = path.basename(filePath);
+      const slug = filename.replace(/\.md$/, '');
 
       invariant(
         attributes?.organization,
-        `${filename} missing "organization" attribute.`,
+        `${slug} missing "organization" attribute.`,
       );
       invariant(
         attributes?.startDate,
-        `${filename} missing "startDate" attribute.`,
+        `${slug} missing "startDate" attribute.`,
       );
-      invariant(attributes?.title, `${filename} missing "title" attribute.`);
+      invariant(attributes?.title, `${slug} missing "title" attribute.`);
 
       const html = marked(body);
 
       return {
         attributes,
         html,
-        slug: filename.replace(/\.md$/, ''),
+        slug: slug,
       };
     }),
   );
