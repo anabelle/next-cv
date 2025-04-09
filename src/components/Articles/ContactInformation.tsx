@@ -18,7 +18,7 @@ const ContactInformation: React.FC<ContactInformationProps> = (props) => {
   const { personalInformation, privateInformation } = props;
 
   return (
-    <Box as="article" marginBottom={{ xs: 6, lg: 0 }}>
+    <Box<'article'> as="article" marginBottom={{ xs: 6, lg: 0 }}>
       <SectionHeader icon={faIdCard} text="Contact Information" />
       <UnorderedList direction="vertical">
         <NavListItem>

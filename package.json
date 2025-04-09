@@ -13,9 +13,6 @@
     "pdf"
   ],
   "homepage": "https://github.com/colinhemphill/nextjs-resume-generator",
-  "engines": {
-    "node": ">=18.0.0"
-  },
   "scripts": {
     "analyze": "ANALYZE=true next build",
     "build": "next build",
@@ -31,7 +28,6 @@
     "types": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@dessert-box/react": "0.2.0",
     "@fortawesome/fontawesome-svg-core": "6.1.1",
     "@fortawesome/free-brands-svg-icons": "6.1.1",
     "@fortawesome/free-regular-svg-icons": "6.1.1",
