@@ -9,18 +9,15 @@ const withPlugins = require('next-compose-plugins');
 
 const isDev = process.env.NODE_ENV === 'development';
 
-const pwa = {
-  disable: isDev,
-  dest: 'public',
-  runtimeCaching,
-};
-
 const nextConfig = {
-  pwa,
   reactStrictMode: true,
   swcMinify: true,
 };
 
-const plugins = [[withVanillaExtract], [withBundleAnalyzer], [withPWA]];
+const plugins = [
+  [withVanillaExtract],
+  [withBundleAnalyzer],
+  [withPWA, { dest: 'public', disable: isDev, runtimeCaching }],
+];
 
 module.exports = withPlugins(plugins, nextConfig);
