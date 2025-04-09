@@ -1,7 +1,4 @@
 {
-  "engines": {
-    "node": "18.x"
-  },
   "build": {
     "env": {
       "ENABLE_FILE_SYSTEM_API": "1"
