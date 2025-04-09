@@ -1,5 +1,6 @@
 import { render } from '@testing-library/react';
 import React, { PropsWithChildren } from 'react';
+import '../helpers/fontawesomeConfig';
 
 const Wrapper: React.FC<PropsWithChildren<any>> = ({ children }) => {
   return <>{children}</>;
