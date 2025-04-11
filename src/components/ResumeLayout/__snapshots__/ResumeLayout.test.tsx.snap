@@ -53,15 +53,176 @@ exports[`<ResumeLayout /> Matches the snapshot 1`] = `
         class="mock-atoms-class mock-row-style-class"
       >
         <div
-          class="mock-atoms-class mock-column-style-base mock-col-xs-12 mock-col-lg-6"
+          class="mock-atoms-class mock-column-style-base mock-col-xs-12"
         >
           <article
-            class="mock-atoms-class"
+            class="mock-atoms-class AboutMe_aboutMeWrapperStyle__1qrrjim0"
           />
         </div>
         <div
-          class="mock-atoms-class mock-column-style-base mock-col-xs-12 mock-col-lg-6"
+          class="mock-atoms-class mock-column-style-base mock-col-xs-12 mock-col-lg-4"
         >
+          <section
+            class="mock-atoms-class"
+          >
+            <h2
+              class="PersonalExperiments_sectionTitleStyle__16fyf950 mock-atoms-class"
+            >
+              <i
+                class="fa code"
+                data-testid="mock-fa-icon"
+              />
+              <span>
+                Personal Projects
+              </span>
+            </h2>
+            <div
+              class="PersonalExperiments_projectContainerStyle__16fyf95b"
+            >
+              <a
+                aria-label="TetrisTwist (opens in new tab)"
+                class="PersonalExperiments_projectCardNonLink__16fyf952 mock-atoms-class"
+                href="https://tetristwist.heyanabelle.com"
+                rel="noopener noreferrer"
+                style="text-decoration: none;"
+                target="_blank"
+              >
+                <div
+                  class="PersonalExperiments_imageBannerStyle__16fyf953 mock-atoms-class"
+                >
+                  <img
+                    alt="TetrisTwist screenshot"
+                    class=""
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    src="/_next/image?url=%2Fimages%2Ftetris.png&w=3840&q=75"
+                    srcset="/_next/image?url=%2Fimages%2Ftetris.png&w=384&q=75 384w, /_next/image?url=%2Fimages%2Ftetris.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Ftetris.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Ftetris.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Ftetris.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Ftetris.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Ftetris.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Ftetris.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Ftetris.png&w=3840&q=75 3840w"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                  />
+                </div>
+                <div
+                  class="PersonalExperiments_contentAreaStyle__16fyf955 mock-atoms-class"
+                >
+                  <span
+                    class="PersonalExperiments_imageTitleStyle__16fyf954 mock-atoms-class"
+                  >
+                    TetrisTwist
+                  </span>
+                  <div
+                    class="PersonalExperiments_techListStyle__16fyf956 mock-atoms-class"
+                  >
+                    <span
+                      class="PersonalExperiments_techTagStyle__16fyf957 mock-atoms-class"
+                    >
+                      Three.js
+                    </span>
+                    <span
+                      class="PersonalExperiments_techTagStyle__16fyf957 mock-atoms-class"
+                    >
+                      WebGL
+                    </span>
+                    <span
+                      class="PersonalExperiments_techTagStyle__16fyf957 mock-atoms-class"
+                    >
+                      React
+                    </span>
+                    <span
+                      class="PersonalExperiments_techTagStyle__16fyf957 mock-atoms-class"
+                    >
+                      TypeScript
+                    </span>
+                  </div>
+                  <p
+                    class="PersonalExperiments_descriptionStyle__16fyf958 mock-atoms-class"
+                  >
+                    A 3D puzzle game combining Tetris mechanics with Rubik's Cube rotations and perspective shifts inspired by Fez.
+                  </p>
+                  <span
+                    class="PersonalExperiments_viewLinkStyle__16fyf959 mock-atoms-class"
+                  >
+                    View Live Demo
+                    <i
+                      class="fa up-right-from-square"
+                      data-testid="mock-fa-icon"
+                    />
+                  </span>
+                </div>
+              </a>
+              <a
+                aria-label="Multiplayer Snake (opens in new tab)"
+                class="PersonalExperiments_projectCardNonLink__16fyf952 mock-atoms-class"
+                href="https://snake.heyanabelle.com"
+                rel="noopener noreferrer"
+                style="text-decoration: none;"
+                target="_blank"
+              >
+                <div
+                  class="PersonalExperiments_imageBannerStyle__16fyf953 mock-atoms-class"
+                >
+                  <img
+                    alt="Multiplayer Snake screenshot"
+                    class=""
+                    data-nimg="fill"
+                    decoding="async"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    src="/_next/image?url=%2Fimages%2Fsnake.png&w=3840&q=75"
+                    srcset="/_next/image?url=%2Fimages%2Fsnake.png&w=384&q=75 384w, /_next/image?url=%2Fimages%2Fsnake.png&w=640&q=75 640w, /_next/image?url=%2Fimages%2Fsnake.png&w=750&q=75 750w, /_next/image?url=%2Fimages%2Fsnake.png&w=828&q=75 828w, /_next/image?url=%2Fimages%2Fsnake.png&w=1080&q=75 1080w, /_next/image?url=%2Fimages%2Fsnake.png&w=1200&q=75 1200w, /_next/image?url=%2Fimages%2Fsnake.png&w=1920&q=75 1920w, /_next/image?url=%2Fimages%2Fsnake.png&w=2048&q=75 2048w, /_next/image?url=%2Fimages%2Fsnake.png&w=3840&q=75 3840w"
+                    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
+                  />
+                </div>
+                <div
+                  class="PersonalExperiments_contentAreaStyle__16fyf955 mock-atoms-class"
+                >
+                  <span
+                    class="PersonalExperiments_imageTitleStyle__16fyf954 mock-atoms-class"
+                  >
+                    Multiplayer Snake
+                  </span>
+                  <div
+                    class="PersonalExperiments_techListStyle__16fyf956 mock-atoms-class"
+                  >
+                    <span
+                      class="PersonalExperiments_techTagStyle__16fyf957 mock-atoms-class"
+                    >
+                      Socket.IO
+                    </span>
+                    <span
+                      class="PersonalExperiments_techTagStyle__16fyf957 mock-atoms-class"
+                    >
+                      Canvas API
+                    </span>
+                    <span
+                      class="PersonalExperiments_techTagStyle__16fyf957 mock-atoms-class"
+                    >
+                      Node.js
+                    </span>
+                    <span
+                      class="PersonalExperiments_techTagStyle__16fyf957 mock-atoms-class"
+                    >
+                      React
+                    </span>
+                  </div>
+                  <p
+                    class="PersonalExperiments_descriptionStyle__16fyf958 mock-atoms-class"
+                  >
+                    Real-time multiplayer implementation of the classic Snake game with competitive gameplay and leaderboards.
+                  </p>
+                  <span
+                    class="PersonalExperiments_viewLinkStyle__16fyf959 mock-atoms-class"
+                  >
+                    View Live Demo
+                    <i
+                      class="fa up-right-from-square"
+                      data-testid="mock-fa-icon"
+                    />
+                  </span>
+                </div>
+              </a>
+            </div>
+          </section>
           <article
             class="mock-atoms-class"
           />
