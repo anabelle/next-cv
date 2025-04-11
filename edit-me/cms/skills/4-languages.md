@@ -2,7 +2,7 @@
 title: Languages
 ---
 
-- Spanish (Native or Bilingual)
-- English (Native or Bilingual)
-- Japanese (Elementary)
-- French (Elementary)
+- Spanish (Native)
+- English (Bilingual C1)
+- French (A2)
+- Japanese (Basic)

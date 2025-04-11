@@ -22,6 +22,7 @@ import ProfessionalItem from '../ProfessionalItem/ProfessionalItem';
 import Section from '../Section/Section';
 import SectionHeader from '../SectionHeader/SectionHeader';
 import Skills from '../Skills/Skills';
+import { PersonalExperiments } from '../PersonalExperiments';
 
 const ResumeLayout: React.FC<ResumePageProps> = (props) => {
   const {
@@ -62,16 +63,20 @@ const ResumeLayout: React.FC<ResumePageProps> = (props) => {
 
       <Section color="standard">
         <Row>
-          <Column width={{ xs: 12, lg: 6 }}>
+          {/* Main Content Column - Wider */}
+          <Column width={{ xs: 12, lg: 8 }}>
             <AboutMe personalInformation={personalInformation} />
           </Column>
-          <Column width={{ xs: 12, lg: 6 }}>
+          {/* Sidebar Column - Narrower */}
+          <Column width={{ xs: 12, lg: 4 }}>
+            {/* Render Personal Projects FIRST */}
+            <PersonalExperiments />
+
             <ContactInformation
               personalInformation={personalInformation}
               privateInformation={privateInformation}
             />
-
-            {/* Render Languages skill below Management in the same column */}
+            {/* Render Languages skill */}
             {languagesSkill && (
               <Box marginTop={4}>
                 <Heading level={4}>{languagesSkill.attributes.title}</Heading>

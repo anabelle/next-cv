@@ -12,6 +12,9 @@ const isDev = process.env.NODE_ENV === 'development';
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    domains: ['via.placeholder.com'],
+  },
 };
 
 const plugins = [
