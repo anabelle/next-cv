@@ -2,7 +2,7 @@
 organization: Publicis Groupe
 startDate: Jun 2022
 endDate: Present
-title: Senior Experience Technology Engineer (Jun 2022 - Present)
+title: Senior Experience Technology Engineer
 location: Bogotá, Capital District, Colombia
 ---
 
