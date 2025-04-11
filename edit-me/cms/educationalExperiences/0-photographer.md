@@ -1,6 +1,6 @@
 ---
-achievement: Photographer
-completionYear: JAN 2003 - DEC 2005
+achievement: Profesional en Fotografía
+completionYear: 2004
 institution: Corporación Universitaria Taller 5
 ---
 
