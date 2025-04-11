@@ -3,6 +3,7 @@ import {
   Document,
   Font,
   Image,
+  Link,
   Page,
   StyleSheet,
   Text,
@@ -10,7 +11,6 @@ import {
 } from '@react-pdf/renderer';
 import React from 'react';
 import Html from 'react-pdf-html';
-import { HtmlProps } from 'react-pdf-html/dist/Html';
 import { getFullName } from '../../helpers/utils';
 import { ResumePageProps } from '../../pages';
 import colors from '../../strum-design-system/themes/timbre/colors';
@@ -48,7 +48,7 @@ Font.register({
   ],
 });
 
-const sidebarWidth = 2.75;
+const sidebarWidth = 2.85;
 const fontSizes = {
   xl: 18,
   l: 16,
@@ -87,18 +87,17 @@ const styles = StyleSheet.create({
     padding: `${spacers[6]} ${spacers[4]}`,
     textAlign: 'center',
   },
-  headerTitle: { fontSize: fontSizes.xl, fontWeight: 700 },
-  headerSubtitle: { fontSize: fontSizes.l, fontWeight: 700 },
+  headerTitle: { fontSize: fontSizes.l, fontWeight: 700 },
+  headerSubtitle: { fontSize: fontSizes.m, fontWeight: 700 },
   main: {
     alignSelf: 'stretch',
     display: 'flex',
-    flexBasis: 'auto',
     flexDirection: 'column',
-    flexGrow: 1,
+    width: '5.65in',
     flexShrink: 0,
     padding: spacers[4],
   },
-  section: { marginBottom: spacers[4] },
+  section: { marginBottom: spacers[3] },
   sectionHeading: {
     alignItems: 'center',
     display: 'flex',
@@ -137,7 +136,7 @@ const styles = StyleSheet.create({
     fontSize: fontSizes.s,
     fontWeight: 700,
     marginBottom: spacers[1],
-    marginTop: spacers[3],
+    marginTop: spacers[2],
   },
   itemSubheadingRow: {
     alignItems: 'center',
@@ -174,17 +173,20 @@ const styles = StyleSheet.create({
   },
 });
 
-const htmlProps: Omit<HtmlProps, 'children'> = {
+const htmlProps = {
   style: { fontSize: fontSizes.xxs },
   stylesheet: {
     a: styles.a,
-    p: styles.sectionParagraph,
+    p: { ...styles.sectionParagraph, marginBottom: spacers[3] },
+    ul: { marginBottom: spacers[1] },
+    li: { marginBottom: spacers[1] },
   },
 };
 
 const PDF: React.FC<ResumePageProps> = (props) => {
   const {
     education,
+    experiments,
     notableProjects,
     personalInformation,
     privateInformation,
@@ -217,7 +219,42 @@ const PDF: React.FC<ResumePageProps> = (props) => {
               </View>
               <Html {...htmlProps}>{personalInformation.html}</Html>
             </View>
-            <View style={styles.section}>
+            {experiments && experiments.length > 0 && (
+              <View style={styles.section}>
+                <View style={styles.sectionHeadingNonHTML}>
+                  <Text>Personal Projects</Text>
+                </View>
+                {experiments.map((experiment) => (
+                  <View
+                    key={experiment.name}
+                    style={{ marginBottom: spacers[1] }}
+                  >
+                    <Text style={styles.itemHeading}>{experiment.name}</Text>
+                    <Text style={styles.sectionParagraph}>
+                      {experiment.description}
+                    </Text>
+                    {experiment.technologies &&
+                      experiment.technologies.length > 0 && (
+                        <Text
+                          style={{
+                            ...styles.itemSubheading,
+                            marginTop: spacers[1],
+                          }}
+                        >
+                          Technologies: {experiment.technologies.join(', ')}
+                        </Text>
+                      )}
+                    <Link
+                      src={experiment.link}
+                      style={{ ...styles.a, marginTop: spacers[1] }}
+                    >
+                      <Text>View Live Demo</Text>
+                    </Link>
+                  </View>
+                ))}
+              </View>
+            )}
+            <View style={{ ...styles.section, marginTop: spacers[4] }}>
               <View style={styles.sectionHeadingNonHTML}>
                 <Image
                   src={`${iconPath}/circle-id-card.png`}
@@ -328,15 +365,7 @@ const PDF: React.FC<ResumePageProps> = (props) => {
               />
               <Text>Awards &amp; Featured Projects</Text>
             </View>
-            <Html
-              {...htmlProps}
-              stylesheet={{
-                ...htmlProps.stylesheet,
-                p: { marginBottom: spacers[1] },
-              }}
-            >
-              {notableProjects.html}
-            </Html>
+            <Html {...htmlProps}>{notableProjects.html}</Html>
           </View>
         </View>
       </Page>

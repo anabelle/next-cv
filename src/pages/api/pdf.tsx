@@ -3,11 +3,12 @@ import { NextApiHandler } from 'next';
 import getCMSIntegration from '../../cms-integration/getCMSIntegration';
 import { getPrivateInformation } from '../../cms-integration/markdown/private';
 import PDF from '../../components/PDF/PDF';
+import { experiments } from '../../../edit-me/data/experiments';
 
 const privateKey = process.env.PRIVATE_KEY;
 
 const handler: NextApiHandler = async (req, res) => {
-  const props = await getCMSIntegration('markdown');
+  const cmsProps = await getCMSIntegration('markdown');
 
   const secret = req.query.secret;
   let privateInformation;
@@ -19,6 +20,8 @@ const handler: NextApiHandler = async (req, res) => {
     }
     privateInformation = await getPrivateInformation();
   }
+
+  const props = { ...cmsProps, experiments };
 
   const pdfStream = await ReactPDF.renderToStream(
     <PDF privateInformation={privateInformation} {...props} />,
