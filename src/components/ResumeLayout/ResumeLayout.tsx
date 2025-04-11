@@ -1,5 +1,6 @@
 import {
   faBriefcase,
+  faCheck,
   faGraduationCap,
 } from '@fortawesome/free-solid-svg-icons';
 import indefinite from 'indefinite';
@@ -9,6 +10,7 @@ import { ResumePageProps } from '../../pages';
 import Box from '../../strum-design-system/components/Box/Box';
 import Column from '../../strum-design-system/components/Layout/Column';
 import Row from '../../strum-design-system/components/Layout/Row';
+import Heading from '../../strum-design-system/components/Heading/Heading';
 import AboutMe from '../Articles/AboutMe';
 import ContactInformation from '../Articles/ContactInformation';
 import NotableProjects from '../Articles/NotableProjects';
@@ -35,6 +37,19 @@ const ResumeLayout: React.FC<ResumePageProps> = (props) => {
   const fullName = getFullName(personalInformation);
   const jobTitle = indefinite(personalInformation.attributes.title);
 
+  // Filter skills
+  const managementSkill = skills.find(
+    (skill) => skill.attributes.title === 'Management & Leadership',
+  );
+  const languagesSkill = skills.find(
+    (skill) => skill.attributes.title === 'Languages',
+  );
+  const otherSkills = skills.filter(
+    (skill) =>
+      skill.attributes.title !== 'Management & Leadership' &&
+      skill.attributes.title !== 'Languages',
+  );
+
   return (
     <>
       <PageHead
@@ -55,10 +70,21 @@ const ResumeLayout: React.FC<ResumePageProps> = (props) => {
               personalInformation={personalInformation}
               privateInformation={privateInformation}
             />
+
+            {/* Render Languages skill below Management in the same column */}
+            {languagesSkill && (
+              <Box marginTop={4}>
+                <Heading level={4}>{languagesSkill.attributes.title}</Heading>
+                <div
+                  dangerouslySetInnerHTML={{ __html: languagesSkill.html }}
+                />
+              </Box>
+            )}
           </Column>
         </Row>
 
-        <Skills skills={skills} />
+        {/* Render remaining skills in the main grid (now below the first row) */}
+        {otherSkills.length > 0 && <Skills skills={otherSkills} />}
       </Section>
 
       <Section color="alternate">
