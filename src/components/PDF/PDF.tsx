@@ -95,7 +95,8 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     width: '5.65in',
     flexShrink: 0,
-    padding: spacers[4],
+    paddingVertical: spacers[4],
+    paddingHorizontal: spacers[5],
   },
   section: { marginBottom: spacers[3] },
   sectionHeading: {
@@ -358,14 +359,24 @@ const PDF: React.FC<ResumePageProps> = (props) => {
             ))}
           </View>
           <View style={styles.section}>
-            <View style={styles.sectionHeading}>
+            <View
+              style={{ ...styles.sectionHeading, marginBottom: spacers[3] }}
+            >
               <Image
                 src={`${iconPath}/circle-pen-paintbrush.png`}
                 style={styles.sectionHeadingIcon}
               />
               <Text>Awards &amp; Featured Projects</Text>
             </View>
-            <Html {...htmlProps}>{notableProjects.html}</Html>
+            <Html
+              {...htmlProps}
+              stylesheet={{
+                ...htmlProps.stylesheet,
+                p: { ...styles.sectionParagraph, marginBottom: 0 },
+              }}
+            >
+              {notableProjects.html}
+            </Html>
           </View>
         </View>
       </Page>
