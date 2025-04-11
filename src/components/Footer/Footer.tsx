@@ -38,12 +38,17 @@ const Footer: React.FC<FooterProps> = (props) => {
                     {personalInformation.attributes.givenName} on {link.title}
                   </span>
                   <span className="fa-layers fa-fw">
-                    <FontAwesomeIcon color={colors.primary} icon={faCircle} />
+                    <FontAwesomeIcon
+                      color={colors.primary}
+                      icon={faCircle}
+                      suppressHydrationWarning
+                    />
                     <FontAwesomeIcon
                       aria-hidden
                       color={colors.white}
                       icon={['fab', link.iconName]}
                       transform="shrink-8"
+                      suppressHydrationWarning
                     />
                   </span>
                 </a>

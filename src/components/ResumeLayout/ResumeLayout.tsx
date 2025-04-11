@@ -15,7 +15,6 @@ import AboutMe from '../Articles/AboutMe';
 import ContactInformation from '../Articles/ContactInformation';
 import NotableProjects from '../Articles/NotableProjects';
 import EducationItem from '../EducationItem/EducationItem';
-import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import PageHead from '../PageHead';
 import ProfessionalItem from '../ProfessionalItem/ProfessionalItem';
@@ -23,6 +22,10 @@ import Section from '../Section/Section';
 import SectionHeader from '../SectionHeader/SectionHeader';
 import Skills from '../Skills/Skills';
 import { PersonalExperiments } from '../PersonalExperiments';
+import dynamic from 'next/dynamic';
+
+// Define Footer dynamically
+const Footer = dynamic(() => import('../Footer/Footer'), { ssr: false });
 
 const ResumeLayout: React.FC<ResumePageProps> = (props) => {
   const {

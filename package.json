@@ -28,11 +28,11 @@
     "types": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "6.1.1",
-    "@fortawesome/free-brands-svg-icons": "6.1.1",
-    "@fortawesome/free-regular-svg-icons": "6.1.1",
-    "@fortawesome/free-solid-svg-icons": "6.1.1",
-    "@fortawesome/react-fontawesome": "0.1.18",
+    "@fortawesome/fontawesome-svg-core": "6.7.2",
+    "@fortawesome/free-brands-svg-icons": "6.7.2",
+    "@fortawesome/free-regular-svg-icons": "6.7.2",
+    "@fortawesome/free-solid-svg-icons": "6.7.2",
+    "@fortawesome/react-fontawesome": "0.2.2",
     "@react-pdf/renderer": "2.1.1",
     "@types/react-dom": "19.1.1",
     "@vanilla-extract/css": "1.17.1",
