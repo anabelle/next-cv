@@ -3,7 +3,7 @@ location: Bogotá, CO
 familyName: Handdoek
 givenName: Anabelle
 # Consider making title more specific if targeting, e.g., Senior Frontend Engineer (React/Next.js)
-title: Senior Full Stack Engineer
+title: Senior Software Architect
 twitterUsername: heyanabelle
 email: ana@8manos.com # Keep this if needed for the generator, but know it might be parsed by ATS
 ---
