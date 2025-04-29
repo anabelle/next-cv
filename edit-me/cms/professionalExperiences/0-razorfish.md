@@ -6,4 +6,4 @@ title: Senior Experience Technology Engineer
 location: Bogotá, Capital District, Colombia
 ---
 
-Creating omni-channel engagement by delivering uniquely personalized and unforgettable experiences that connect and enrich people's lives.
+Developed and maintained complex user interfaces for global enterprise clients using **React**, **Next.js**, and **TypeScript**. Focused on implementing robust design systems and ensuring adherence to **WCAG AA accessibility** standards. Contributed to improving component library performance and maintainability.

@@ -1,5 +1,5 @@
 ---
-title: HTML / CSS / JS
+title: Frontend Development
 ---
 
-Front-end development with vanilla languages as well as different frameworks such as: React, Angular, Vue.js, WordPress, Django, node.js, Bootstrap, Next.js, D3.js, WEB3.js and others.
+Expertise in modern frontend development using **TypeScript**, **React**, **Next.js**, and **Vue.js**. Proficient with web3 libraries including **web3.js** and Ethers.js for blockchain interaction. Strong foundation in core **HTML**, **CSS**, and **JavaScript**.

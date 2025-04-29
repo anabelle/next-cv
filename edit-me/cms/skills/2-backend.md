@@ -1,5 +1,5 @@
 ---
-title: PHP / Node.js / Python / Solidity
+title: Backend & Blockchain
 ---
 
-Backend development for Content Management Systems as well as development of custom APIs for REST and GraphQL interfaces.
+Experience in backend development using **Node.js**, **Python**, and **PHP**, including building custom REST/GraphQL APIs. Familiarity with smart contract development using **Solidity**.
