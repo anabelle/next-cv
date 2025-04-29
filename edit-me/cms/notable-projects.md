@@ -2,7 +2,7 @@
 
 **Key Projects:**
 
-- **PautaVisible Government Transparency Platform:** ([pautavisible.org](https://pautavisible.org))
+- **PautaVisible Government Transparency Platform:** ([pautavisible.org](https://lagentedelcomun.info/pauta-visible-2/))
   - Engineered the frontend for this award-winning platform, focusing on complex **data visualization (D3.js)** and secure handling of public datasets. Utilized **React** and **Node.js** to deliver insights into government PautaVisible. Recognized for promoting transparency.
 - **45 Salón Nacional de Artistas Digital Exhibition:** ([45sna.com](https://45sna.lagentedelcomun.info))
   - Developed Colombia's first interactive digital art exhibition website. Focused on **performance optimization** for rich media content and ensuring **cross-browser compatibility** using **Next.js**.
