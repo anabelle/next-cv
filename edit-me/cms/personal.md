@@ -8,7 +8,7 @@ twitterUsername: heyanabelle
 email: ana@8manos.com # Keep this if needed for the generator, but know it might be parsed by ATS
 ---
 
-Experienced **Software Architect** and **Senior Full Stack Engineer** with over 15 years of experience delivering scalable, high-performance web applications using **React**, **Next.js**, **TypeScript**, and **Node.js**. Proven ability leading complex projects for major clients, including Publicis Groupe and Colombian government entities, with a strong focus on **performance optimization**, **accessibility (WCAG)**, and user-centric design. Expertise spans **open source software** and modern web technologies.
+**Software Architect** and **Senior Full Stack Engineer** with over 15 years of experience delivering scalable, high-performance web applications using **React**, **Next.js**, **TypeScript**, and **Node.js**. Proven ability leading complex projects for major clients, including Publicis Groupe and Colombian government entities, with a strong focus on **performance optimization**, **accessibility (WCAG)**, and user-centric design. Expertise spans **open source software** and modern web technologies.
 
 Eager to leverage extensive experience in secure, high-performance frontend development (React, Next.js, TypeScript) to contribute to innovative projects in the rapidly evolving web3 and DeFi space.
 
