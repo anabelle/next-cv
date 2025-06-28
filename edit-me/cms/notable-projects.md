@@ -1,5 +1,5 @@
 
-**Awards and Recognitions:**
+**Notable projects:**
 
 - **PautaVisible Government Transparency Platform:** ([pautavisible.org](https://lagentedelcomun.info/pauta-visible-2/))
   - Engineered the frontend for this award-winning platform, focusing on complex **data visualization (D3.js)** and secure handling of public datasets. Utilized **React** and **Node.js** to deliver insights into government PautaVisible. Recognized for promoting transparency.
