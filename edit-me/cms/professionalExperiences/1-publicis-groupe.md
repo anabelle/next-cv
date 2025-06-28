@@ -12,4 +12,4 @@ Developing best-in-class user interfaces for major global brands (including Publ
 
 **Senior Front-End Engineer (Jun 2022 - Oct 2023):**
 
-Developed and maintained outstanding user interfaces for major global companies using **React** and **TypeScript**. Key contributions included updating major brand's ecommerce sites to increase accessibility, conversion and user retention and implement detail tracking to verify outcomes. Gained expertise in emerging technologies and improved technical abilities through challenging projects.
+Developed and maintained outstanding user interfaces for major global companies using **React** and **TypeScript**. Key contributions included updating major brand's ecommerce sites to increase accessibility, conversion and user retention and implement detailed tracking to verify outcomes with reliable data. Gained expertise in emerging technologies and improved technical abilities through challenging projects.
