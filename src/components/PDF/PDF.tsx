@@ -372,7 +372,7 @@ const PDF: React.FC<ResumePageProps> = (props) => {
               {...htmlProps}
               stylesheet={{
                 ...htmlProps.stylesheet,
-                p: { ...styles.sectionParagraph, marginBottom: 0, paddingRight: 4rem },
+                p: { ...styles.sectionParagraph, marginBottom: 0, paddingRight: spacers[4] },
               }}
             >
               {notableProjects.html}
