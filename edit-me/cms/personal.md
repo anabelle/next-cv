@@ -2,21 +2,14 @@
 location: Bogotá, CO
 familyName: Handdoek
 givenName: Anabelle
-# Consider making title more specific if targeting, e.g., Senior Frontend Engineer (React/Next.js)
 title: Senior Software Architect
 twitterUsername: heyanabelle
-email: ana@8manos.com # Keep this if needed for the generator, but know it might be parsed by ATS
+email: ana@8manos.com
 ---
 
-**Software Architect** and **Senior Full Stack Engineer** with over 15 years of experience delivering accessible, scalable, high-performance and secure web applications using cutting edge technologies. Proven ability leading complex projects for major clients, including Publicis Groupe and Colombian government entities, with a strong focus on **performance optimization**, **accessibility (WCAG/ARIA)**, **AODA, ADA**, **Section 508**, **OWASP** and user-centric design. 
-My expertise spans **open source software** and modern web technologies.
+**Senior Software Architect** and **Full Stack Engineer** with 15+ years of experience building accessible (WCAG/ARIA, ADA, AOUDA, Section 508), high-performance, and secure (OWASP) web applications. Proficient in React, Next.js, TypeScript, Node.js, and passionate about open source, Artificial Intelligence, web3 & DeFi.
 
-Eager to leverage extensive experience in secure, high-performance frontend development (React, Next.js, TypeScript, Node) to contribute to innovative projects in the rapidly evolving web3 and DeFi space.
+Founder of [&infin;manos](https://8manos.com) and creator of award-winning digital experiences like [Colombia’s Peace Process Open Library](https://bapp.com.co). Experienced as a contractor, consultant, and company owner, leading projects of all sizes and serving millions of users.
 
-Creative entrepreneur (founder of [&infin;manos](https://8manos.com)) passionate about building impactful digital experiences, such as the award-winning Open Library for Colombia's Peace Process ([BAPP.com.co](https://bapp.com.co)). Currently enhancing digital experiences at Publicis Groupe, while actively seeking to contribute to the FOSS ecosystem and socially meaningful projects.
-
-I've worked as a contractor, as a consultant, as an independent and also as a software development company owner. I've had the opportunity to be a part of projects of all sizes including large scale government projects for some of the largest organizations in Colombia such as Ministerio de Cultura, Federación Nacional de Cafeteros, Banco de la República and others.
-
-I'm currently working at the technology vertical for the largest advertising agency in the world, [Publicis Groupe](https://www.publicisgroupe.com/). I enjoy developing projects with big social impacts like 070 journalism platform ([070](https://cerosetenta.uniandes.edu.co)) and the 45 Salón Nacional de Artistas. ([45sna.com](https://45sna.com)).
-
-I am a highly motivated, self-taught professional who thrives on problem-solving and continually seeks to expand my knowledge of cutting-edge technologies in the FOSS ecosystem.
+Currently at [Publicis Groupe](https://www.publicisgroupe.com/), delivering impactful solutions for global clients. 
+Lifelong learner, self-motivated, and always exploring the latest in FOSS and technology.
