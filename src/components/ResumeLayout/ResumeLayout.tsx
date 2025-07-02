@@ -74,11 +74,7 @@ const ResumeLayout: React.FC<ResumePageProps> = (props) => {
               personalInformation={personalInformation}
               privateInformation={privateInformation}
             />
-          </Column>
-          {/* Sidebar Column - Narrower */}
-          <Column width={{ xs: 12, lg: 4 }}>
-            {/* Render Personal Projects FIRST */}
-            <PersonalExperiments />
+
             {/* Render Languages skill */}
             {languagesSkill && (
               <Box marginTop={4}>
@@ -88,6 +84,11 @@ const ResumeLayout: React.FC<ResumePageProps> = (props) => {
                 />
               </Box>
             )}
+          </Column>
+          {/* Sidebar Column - Narrower */}
+          <Column width={{ xs: 12, lg: 4 }}>
+            {/* Render Personal Projects FIRST */}
+            <PersonalExperiments />
           </Column>
         </Row>
 
