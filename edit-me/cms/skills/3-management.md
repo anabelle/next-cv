@@ -2,4 +2,4 @@
 title: Management & Leadership
 ---
 
-Project Management, Team Leadership, Mentoring, Entrepreneurship, Client Communication.
+SCRUM Project Management Certified, Strong Team Leadership, Mentoring, Entrepreneurship and Bilingual Client/Team Communication.
