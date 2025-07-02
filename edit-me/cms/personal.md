@@ -8,7 +8,8 @@ twitterUsername: heyanabelle
 email: ana@8manos.com # Keep this if needed for the generator, but know it might be parsed by ATS
 ---
 
-**Software Architect** and **Senior Full Stack Engineer** with over 15 years of experience delivering accessible, scalable, high-performance web applications using cutting edge technologies. Proven ability leading complex projects for major clients, including Publicis Groupe and Colombian government entities, with a strong focus on **performance optimization**, **accessibility (WCAG)**, and user-centric design. Expertise spans **open source software** and modern web technologies.
+**Software Architect** and **Senior Full Stack Engineer** with over 15 years of experience delivering accessible, scalable, high-performance and secure web applications using cutting edge technologies. Proven ability leading complex projects for major clients, including Publicis Groupe and Colombian government entities, with a strong focus on **performance optimization**, **accessibility (WCAG/ARIA)**, **AODA, ADA**, **Section 508**, **OWASP** and user-centric design. 
+My expertise spans **open source software** and modern web technologies.
 
 Eager to leverage extensive experience in secure, high-performance frontend development (React, Next.js, TypeScript, Node) to contribute to innovative projects in the rapidly evolving web3 and DeFi space.
 
