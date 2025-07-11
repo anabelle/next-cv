@@ -2,7 +2,7 @@
 organization: Razorfish
 startDate: Oct 2023
 endDate: Present
-title: Senior Experience Technology Engineer
+title: Experience Technology Architect
 location: Bogotá, Capital District, Colombia
 ---
 
