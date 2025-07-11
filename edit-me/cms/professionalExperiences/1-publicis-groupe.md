@@ -6,9 +6,13 @@ title: Senior Experience Technology Engineer
 location: Bogotá, Capital District, Colombia
 ---
 
-**Senior Experience Technology Engineer (Oct 2023 - Present):**
+**Experience Technology Architect (Jul 2025 - Present):**
 
-Created best-in-class user interfaces for major global brands (including Publicis Global Delivery and Razorfish), adhering to AA accessibility, legal, and security standards. Integrating front-end and back-end systems, implementing performance optimization techniques, working with designers and product managers to create user-centered products, and mentoring junior engineers.
+Architecting Tomorrow’s Experiences through Innovation, Accessibility, and Technical Excellence.Architecting Tomorrow’s Experiences through Innovation, Accessibility, and Technical Excellence.
+
+**Senior Experience Technology Engineer (Oct 2023 - Jul 2025):**
+
+Developed world class user interfaces for global brands, ensuring AA accessibility, legal, and security compliance, integrated front-end and back-end systems, implemented performance optimization techniques, collaborated with designers and product managers to create user-centered products, mentored junior engineers, and led innovation in the PGD OnChain community.
 
 **Senior Front-End Engineer (Jun 2022 - Oct 2023):**
 
