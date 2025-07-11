@@ -8,7 +8,7 @@ location: Bogotá, Capital District, Colombia
 
 **Experience Technology Architect (Jul 2025 - Present):**
 
-Architecting Tomorrow’s Experiences through Innovation, Accessibility, and Technical Excellence.Architecting Tomorrow’s Experiences through Innovation, Accessibility, and Technical Excellence.
+Architecting Tomorrow’s Experiences through Innovation, Accessibility, and Technical Excellence.
 
 **Senior Experience Technology Engineer (Oct 2023 - Jul 2025):**
 
