@@ -6,6 +6,8 @@ title: Senior Experience Technology Engineer
 location: Bogotá, Capital District, Colombia
 ---
 
+**Experience Technology Architect (Jul 2025 - Present):**
+
 Creating omni-channel engagement by delivering uniquely personalized and unforgettable experiences that connect and enrich people's lives.
 
 **Senior Experience Technology Engineer (Nov 2023 - Jul 2025):**
