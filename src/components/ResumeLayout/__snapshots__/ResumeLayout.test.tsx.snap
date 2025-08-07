@@ -58,6 +58,9 @@ exports[`<ResumeLayout /> Matches the snapshot 1`] = `
           <article
             class="mock-atoms-class AboutMe_aboutMeWrapperStyle__1qrrjim0"
           />
+          <article
+            class="mock-atoms-class"
+          />
         </div>
         <div
           class="mock-atoms-class mock-column-style-base mock-col-xs-12 mock-col-lg-4"
@@ -66,7 +69,7 @@ exports[`<ResumeLayout /> Matches the snapshot 1`] = `
             class="mock-atoms-class"
           >
             <h2
-              class="PersonalExperiments_sectionTitleStyle__16fyf950 mock-atoms-class"
+              class="PersonalExperiments_sectionTitleStyle__16fyf952"
             >
               <i
                 class="fa code"
@@ -77,18 +80,18 @@ exports[`<ResumeLayout /> Matches the snapshot 1`] = `
               </span>
             </h2>
             <div
-              class="PersonalExperiments_projectContainerStyle__16fyf95b"
+              class="PersonalExperiments_projectContainerStyle__16fyf95d"
             >
               <a
                 aria-label="TetrisTwist (opens in new tab)"
-                class="PersonalExperiments_projectCardNonLink__16fyf952 mock-atoms-class"
+                class="PersonalExperiments_projectCardNonLink__16fyf954 mock-atoms-class"
                 href="https://tetristwist.heyanabelle.com"
                 rel="noopener noreferrer"
                 style="text-decoration: none;"
                 target="_blank"
               >
                 <div
-                  class="PersonalExperiments_imageBannerStyle__16fyf953 mock-atoms-class"
+                  class="PersonalExperiments_imageBannerStyle__16fyf955 mock-atoms-class"
                 >
                   <img
                     alt="TetrisTwist screenshot"
@@ -103,44 +106,44 @@ exports[`<ResumeLayout /> Matches the snapshot 1`] = `
                   />
                 </div>
                 <div
-                  class="PersonalExperiments_contentAreaStyle__16fyf955 mock-atoms-class"
+                  class="PersonalExperiments_contentAreaStyle__16fyf957 mock-atoms-class"
                 >
                   <span
-                    class="PersonalExperiments_imageTitleStyle__16fyf954 mock-atoms-class"
+                    class="PersonalExperiments_imageTitleStyle__16fyf956 mock-atoms-class"
                   >
                     TetrisTwist
                   </span>
                   <div
-                    class="PersonalExperiments_techListStyle__16fyf956 mock-atoms-class"
+                    class="PersonalExperiments_techListStyle__16fyf958 mock-atoms-class"
                   >
                     <span
-                      class="PersonalExperiments_techTagStyle__16fyf957 mock-atoms-class"
+                      class="PersonalExperiments_techTagStyle__16fyf959 mock-atoms-class"
                     >
                       Three.js
                     </span>
                     <span
-                      class="PersonalExperiments_techTagStyle__16fyf957 mock-atoms-class"
+                      class="PersonalExperiments_techTagStyle__16fyf959 mock-atoms-class"
                     >
                       WebGL
                     </span>
                     <span
-                      class="PersonalExperiments_techTagStyle__16fyf957 mock-atoms-class"
+                      class="PersonalExperiments_techTagStyle__16fyf959 mock-atoms-class"
                     >
                       React
                     </span>
                     <span
-                      class="PersonalExperiments_techTagStyle__16fyf957 mock-atoms-class"
+                      class="PersonalExperiments_techTagStyle__16fyf959 mock-atoms-class"
                     >
                       TypeScript
                     </span>
                   </div>
                   <p
-                    class="PersonalExperiments_descriptionStyle__16fyf958 mock-atoms-class"
+                    class="PersonalExperiments_descriptionStyle__16fyf95a mock-atoms-class"
                   >
                     A 3D puzzle game combining Tetris mechanics with Rubik's Cube rotations and perspective shifts inspired by Fez.
                   </p>
                   <span
-                    class="PersonalExperiments_viewLinkStyle__16fyf959 mock-atoms-class"
+                    class="PersonalExperiments_viewLinkStyle__16fyf95b mock-atoms-class"
                   >
                     View Live Demo
                     <i
@@ -152,14 +155,14 @@ exports[`<ResumeLayout /> Matches the snapshot 1`] = `
               </a>
               <a
                 aria-label="Multiplayer Snake (opens in new tab)"
-                class="PersonalExperiments_projectCardNonLink__16fyf952 mock-atoms-class"
+                class="PersonalExperiments_projectCardNonLink__16fyf954 mock-atoms-class"
                 href="https://snake.heyanabelle.com"
                 rel="noopener noreferrer"
                 style="text-decoration: none;"
                 target="_blank"
               >
                 <div
-                  class="PersonalExperiments_imageBannerStyle__16fyf953 mock-atoms-class"
+                  class="PersonalExperiments_imageBannerStyle__16fyf955 mock-atoms-class"
                 >
                   <img
                     alt="Multiplayer Snake screenshot"
@@ -174,44 +177,44 @@ exports[`<ResumeLayout /> Matches the snapshot 1`] = `
                   />
                 </div>
                 <div
-                  class="PersonalExperiments_contentAreaStyle__16fyf955 mock-atoms-class"
+                  class="PersonalExperiments_contentAreaStyle__16fyf957 mock-atoms-class"
                 >
                   <span
-                    class="PersonalExperiments_imageTitleStyle__16fyf954 mock-atoms-class"
+                    class="PersonalExperiments_imageTitleStyle__16fyf956 mock-atoms-class"
                   >
                     Multiplayer Snake
                   </span>
                   <div
-                    class="PersonalExperiments_techListStyle__16fyf956 mock-atoms-class"
+                    class="PersonalExperiments_techListStyle__16fyf958 mock-atoms-class"
                   >
                     <span
-                      class="PersonalExperiments_techTagStyle__16fyf957 mock-atoms-class"
+                      class="PersonalExperiments_techTagStyle__16fyf959 mock-atoms-class"
                     >
                       Socket.IO
                     </span>
                     <span
-                      class="PersonalExperiments_techTagStyle__16fyf957 mock-atoms-class"
+                      class="PersonalExperiments_techTagStyle__16fyf959 mock-atoms-class"
                     >
                       Canvas API
                     </span>
                     <span
-                      class="PersonalExperiments_techTagStyle__16fyf957 mock-atoms-class"
+                      class="PersonalExperiments_techTagStyle__16fyf959 mock-atoms-class"
                     >
                       Node.js
                     </span>
                     <span
-                      class="PersonalExperiments_techTagStyle__16fyf957 mock-atoms-class"
+                      class="PersonalExperiments_techTagStyle__16fyf959 mock-atoms-class"
                     >
                       React
                     </span>
                   </div>
                   <p
-                    class="PersonalExperiments_descriptionStyle__16fyf958 mock-atoms-class"
+                    class="PersonalExperiments_descriptionStyle__16fyf95a mock-atoms-class"
                   >
                     Real-time multiplayer implementation of the classic Snake game with competitive gameplay and leaderboards.
                   </p>
                   <span
-                    class="PersonalExperiments_viewLinkStyle__16fyf959 mock-atoms-class"
+                    class="PersonalExperiments_viewLinkStyle__16fyf95b mock-atoms-class"
                   >
                     View Live Demo
                     <i
@@ -223,9 +226,6 @@ exports[`<ResumeLayout /> Matches the snapshot 1`] = `
               </a>
             </div>
           </section>
-          <article
-            class="mock-atoms-class"
-          />
         </div>
       </div>
       <div

@@ -11,26 +11,28 @@ export const sectionStyle = atoms({
   marginTop: 6,
 });
 
+// Define light and dark theme styles
+export const lightThemeClass = style({
+  color: colors.black, // Black for light mode
+});
+
+export const darkThemeClass = style({
+  color: colors.white, // White for dark mode
+});
+
+// Apply the text color globally
 export const sectionTitleStyle = style([
-  atoms({
-    // fontSize: 'xl', // Not in atoms
-    // fontWeight: 'bold', // Not in atoms
-    marginBottom: 4,
-    display: 'flex',
-    // alignItems: 'center', // Not in atoms
-    // gap: 2, // Not in atoms
-  }),
   {
-    fontSize: '1.25rem', // Example: Assuming xl maps to this
+    fontSize: '1.25rem',
     fontWeight: 700,
     alignItems: 'center',
-    gap: mapSpacer(2),
-    color: colors.white,
+    gap: '8px',
   },
 ]);
 
 export const titleIconStyle = style({
   color: colors.primary, // Use defined primary color
+  marginRight: '0.5rem',
 });
 
 // Style for the card container (no longer a link)
@@ -184,9 +186,3 @@ export const projectContainerStyle = style({
   justifyContent: 'center', // Center the cards if space allows
   marginTop: '2rem',
 });
-
-// Style for each technology tag
-// export const techTagStyle = style({
-//   backgroundColor: '#e0e0e0', // Light gray background
-//   // ... existing code ...
-// });
