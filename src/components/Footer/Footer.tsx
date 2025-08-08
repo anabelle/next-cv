@@ -37,20 +37,85 @@ const Footer: React.FC<FooterProps> = (props) => {
                   <span className={visuallyHidden}>
                     {personalInformation.attributes.givenName} on {link.title}
                   </span>
-                  <span className="fa-layers fa-fw">
-                    <FontAwesomeIcon
-                      color={colors.primary}
-                      icon={faCircle}
-                      suppressHydrationWarning
-                    />
-                    <FontAwesomeIcon
-                      aria-hidden
-                      color={colors.white}
-                      icon={['fab', link.iconName]}
-                      transform="shrink-8"
-                      suppressHydrationWarning
-                    />
-                  </span>
+                  {link.iconName === 'custom-svg' &&
+                  (link.svgPath || link.svgFile) ? (
+                    <span
+                      className="fa-layers fa-fw"
+                      style={{
+                        position: 'relative',
+                        width: '1em',
+                        height: '1em',
+                      }}
+                    >
+                      {link.svgFile ? (
+                        <div
+                          style={{
+                            position: 'relative',
+                            width: '100%',
+                            height: '100%',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            top: '-8px',
+                          }}
+                        >
+                          <span
+                            style={{
+                              position: 'absolute',
+                              width: '100%',
+                              height: '100%',
+                              backgroundColor: colors.primary,
+                              borderRadius: '50%',
+                              zIndex: 0,
+                            }}
+                          ></span>
+                          <img
+                            src={link.svgFile}
+                            alt={link.title}
+                            style={{
+                              position: 'relative',
+                              width: '60%',
+                              height: '60%',
+                              zIndex: 1,
+                              filter: 'brightness(0) invert(1)',
+                            }}
+                          />
+                        </div>
+                      ) : (
+                        <svg
+                          viewBox="0 0 512 512"
+                          style={{ width: '100%', height: '100%' }}
+                        >
+                          <circle
+                            cx="256"
+                            cy="256"
+                            r="256"
+                            fill={colors.primary}
+                          />
+                          <path
+                            d={link.svgPath}
+                            fill={colors.white}
+                            transform="scale(0.5) translate(256, 256)"
+                          />
+                        </svg>
+                      )}
+                    </span>
+                  ) : (
+                    <span className="fa-layers fa-fw">
+                      <FontAwesomeIcon
+                        color={colors.primary}
+                        icon={faCircle}
+                        suppressHydrationWarning
+                      />
+                      <FontAwesomeIcon
+                        aria-hidden
+                        color={colors.white}
+                        icon={['fab', link.iconName as any]}
+                        transform="shrink-8"
+                        suppressHydrationWarning
+                      />
+                    </span>
+                  )}
                 </a>
               </AutoGridCell>
             ))}

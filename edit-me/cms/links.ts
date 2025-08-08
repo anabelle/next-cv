@@ -16,10 +16,15 @@ export const links: CMSLink[] = [
     iconName: 'linkedin',
     title: 'LinkedIn',
   },
-
   {
     href: 'https://twitter.com/heyanabelle',
     iconName: 'x-twitter',
-    title: 'Twitter',
+    title: 'X',
+  },
+  {
+    href: 'https://primal.net/p/nprofile1qqsdcmn9eaw7pfykhwr2uq3ps39nkj9a8k3xg0xahn35ucr4ftzmn9czsqwxy',
+    iconName: 'custom-svg',
+    title: 'NOSTR',
+    svgFile: '/images/nostr.svg',
   },
 ];
