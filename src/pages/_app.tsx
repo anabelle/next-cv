@@ -8,6 +8,13 @@ import '../strum-design-system';
 import StrumProvider from '../strum-design-system/components/StrumProvider/StrumProvider';
 import colors from '../strum-design-system/themes/timbre/colors';
 import '../styles/app.css';
+import dynamic from 'next/dynamic';
+
+// Avoid SSR for spotlight to prevent mismatch and unnecessary work on server
+const CursorSpotlight = dynamic(
+  () => import('../components/CursorSpotlight/CursorSpotlight'),
+  { ssr: false },
+);
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
@@ -23,6 +30,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 
       <ErrorBoundary>
         <StrumProvider>
+          <CursorSpotlight />
           <Component {...pageProps} />
         </StrumProvider>
       </ErrorBoundary>
