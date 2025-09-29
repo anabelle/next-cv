@@ -5,6 +5,8 @@ import { getPrivateInformation } from '../../cms-integration/markdown/private';
 import PDF from '../../components/PDF/PDF';
 import { experiments } from '../../../edit-me/data/experiments';
 
+export const runtime = 'edge';
+
 const privateKey = process.env.PRIVATE_KEY;
 
 const handler: NextApiHandler = async (req, res) => {
