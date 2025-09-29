@@ -1,4 +1,4 @@
-export const runtime = 'edge';
+export const runtime = 'experimental-edge';
 
 import ReactPDF from '@react-pdf/renderer';
 import { NextApiHandler } from 'next';
