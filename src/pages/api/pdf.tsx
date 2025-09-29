@@ -1,11 +1,11 @@
+export const runtime = 'edge';
+
 import ReactPDF from '@react-pdf/renderer';
 import { NextApiHandler } from 'next';
 import getCMSIntegration from '../../cms-integration/getCMSIntegration';
 import { getPrivateInformation } from '../../cms-integration/markdown/private';
 import PDF from '../../components/PDF/PDF';
 import { experiments } from '../../../edit-me/data/experiments';
-
-export const runtime = 'edge';
 
 const privateKey = process.env.PRIVATE_KEY;
 
