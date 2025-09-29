@@ -136,17 +136,7 @@ const Footer: React.FC<FooterProps> = (props) => {
               target="_blank"
             >
               Next.js
-            </a>{' '}
-            and deployed on{' '}
-            <a
-              className={footerLinkStyle}
-              href="https://vercel.com/"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Vercel
-            </a>
-            .
+            </a>.
           </small>
         </div>
       </Container>
