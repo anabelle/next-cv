@@ -1,5 +1,3 @@
-export const runtime = 'experimental-edge';
-
 import ReactPDF from '@react-pdf/renderer';
 import { NextApiHandler } from 'next';
 import getCMSIntegration from '../../cms-integration/getCMSIntegration';
