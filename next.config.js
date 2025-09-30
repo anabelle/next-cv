@@ -15,7 +15,14 @@ const nextConfig = {
   images: {
     domains: ['via.placeholder.com'],
   },
+  webpack5: true,
+  webpack: (config) => {
+    config.resolve.fallback = { fs: false };
+
+    return config;
+  }
 };
+
 
 const plugins = [
   [withVanillaExtract],
