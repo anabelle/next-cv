@@ -149,7 +149,7 @@ exports[`<ResumeLayout /> Matches the snapshot 1`] = `
                   <p
                     class="PersonalExperiments_descriptionStyle__16fyf95e mock-atoms-class"
                   >
-                    Survival‑driven pixel art agent on a $3/mo VPS: sells pixels for sats (1 sat = 1 pixel) on a live collaborative canvas. Built Lightning payments, real‑time rendering, Telegram bot, and Nostr integrations.
+                    Autonomous AI agent that sells pixels art via Lightning Network payments. Built a full-stack system integrating Bitcoin payments, real-time canvas rendering, and AI-driven content generation and self-improvement algorithms.
                   </p>
                   <span
                     class="PersonalExperiments_viewLinkStyle__16fyf95f mock-atoms-class"
