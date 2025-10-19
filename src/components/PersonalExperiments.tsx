@@ -64,6 +64,7 @@ export function PersonalExperiments() {
                 fill
                 sizes="100vw"
                 className=""
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
               />
               {featured.avatarUrl && (
                 <div className={styles.featuredAvatarWrapper}>
@@ -116,6 +117,7 @@ export function PersonalExperiments() {
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className=""
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
               />
             </div>
 
