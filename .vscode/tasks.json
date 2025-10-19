@@ -19,6 +19,15 @@
 				"$tsc"
 			],
 			"group": "build"
+		},
+		{
+			"label": "Rebuild content (typecheck + tests)",
+			"type": "shell",
+			"command": "npm run types --silent && npm test --silent",
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": "build"
 		}
 	]
 }
