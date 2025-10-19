@@ -17,7 +17,7 @@ export const experiments: Experiment[] = [
   {
     name: 'Pixel',
     description:
-      'Autonomous AI agent that sells pixels art via Lightning Network payments. Built a full-stack system integrating Bitcoin payments, real-time canvas rendering, and AI-driven content generation and self-improvement algorithms.',
+      'Autonomous AI agent that promotes art and sells pixels via Lightning Network payments. Built a full-stack system integrating Bitcoin payments, real-time canvas rendering, and AI-driven content generation and self-improvement algorithms.',
     link: 'https://pixel.xx.kg',
     imageUrl: '/images/pixel.png',
     technologies: ['Autonomous AI Agent', 'Digital Art', 'Bitcoin', 'Nostr'],
