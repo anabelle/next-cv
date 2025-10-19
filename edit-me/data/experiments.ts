@@ -15,7 +15,7 @@ export interface Experiment {
 
 export const experiments: Experiment[] = [
   {
-    name: 'Pixel',
+    name: 'Pixel Survivor',
     description:
       'Autonomous AI agent that promotes art and sells pixels via Lightning Network payments. Built a full-stack system integrating Bitcoin payments, real-time canvas rendering, and AI-driven content generation and self-improvement algorithms.',
     link: 'https://pixel.xx.kg',
