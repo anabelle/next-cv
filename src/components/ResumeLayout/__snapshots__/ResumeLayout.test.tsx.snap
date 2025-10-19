@@ -83,7 +83,7 @@ exports[`<ResumeLayout /> Matches the snapshot 1`] = `
               class="PersonalExperiments_projectContainerStyle__16fyf95h"
             >
               <a
-                aria-label="Pixel (opens in new tab)"
+                aria-label="Pixel Survivor (opens in new tab)"
                 class="PersonalExperiments_projectCardFeatured__16fyf955 mock-atoms-class"
                 href="https://pixel.xx.kg"
                 rel="noopener noreferrer"
@@ -94,7 +94,7 @@ exports[`<ResumeLayout /> Matches the snapshot 1`] = `
                   class="PersonalExperiments_imageBannerFeaturedStyle__16fyf957 mock-atoms-class"
                 >
                   <img
-                    alt="Pixel screenshot"
+                    alt="Pixel Survivor screenshot"
                     class=""
                     data-nimg="fill"
                     decoding="async"
@@ -108,7 +108,7 @@ exports[`<ResumeLayout /> Matches the snapshot 1`] = `
                     class="PersonalExperiments_featuredAvatarWrapper__16fyf958"
                   >
                     <img
-                      alt="Pixel avatar"
+                      alt="Pixel Survivor avatar"
                       class="PersonalExperiments_featuredAvatarImg__16fyf959"
                       src="/images/pixel_avatar.png"
                     />
@@ -120,7 +120,7 @@ exports[`<ResumeLayout /> Matches the snapshot 1`] = `
                   <span
                     class="PersonalExperiments_imageTitleStyle__16fyf95a mock-atoms-class"
                   >
-                    Pixel
+                    Pixel Survivor
                   </span>
                   <div
                     class="PersonalExperiments_techListStyle__16fyf95c mock-atoms-class"
