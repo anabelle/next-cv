@@ -149,7 +149,7 @@ exports[`<ResumeLayout /> Matches the snapshot 1`] = `
                   <p
                     class="PersonalExperiments_descriptionStyle__16fyf95e mock-atoms-class"
                   >
-                    Autonomous AI agent that promotes art and sells pixels via Lightning Network payments. Built a full-stack system integrating Bitcoin payments, real-time canvas rendering, and AI-driven content generation and self-improvement algorithms.
+                    Autonomous AI agent that promotes art and sells pixels via Lightning Network payments. Built a full-stack system integrating Bitcoin payments, real-time canvas rendering, social context-aware AI-driven content generation, and self-improvement algorithms.
                   </p>
                   <span
                     class="PersonalExperiments_viewLinkStyle__16fyf95f mock-atoms-class"
