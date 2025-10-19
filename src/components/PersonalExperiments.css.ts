@@ -120,7 +120,7 @@ export const featuredAvatarImg = style({
 globalStyle(`${imageBannerStyle} > img`, {
   display: 'block',
   width: '100%',
-  height: '100%',
+  height: 'auto',
   objectFit: 'cover',
   objectPosition: 'center',
   // filter: 'brightness(0.95)', // Removed brightness filter
