@@ -4,13 +4,30 @@ export interface Experiment {
   link: string;
   imageUrl: string;
   technologies: string[];
+  /**
+   * When true, this project will be emphasized as a full-width card
+   * above the standard two-column grid.
+   */
+  featured?: boolean;
+  /** Optional circular avatar image for social-style overlay */
+  avatarUrl?: string;
 }
 
 export const experiments: Experiment[] = [
   {
+    name: 'Pixel',
+    description:
+      'Autonomous AI agent that sells pixels art via Lightning Network payments. Built a full-stack system integrating Bitcoin payments, real-time canvas rendering, and AI-driven content generation and self-improvement algorithms.',
+    link: 'https://pixel.xx.kg',
+    imageUrl: '/images/pixel.png',
+    technologies: ['Autonomous AI Agent', 'Digital Art', 'Bitcoin', 'Nostr'],
+    featured: true,
+    avatarUrl: '/images/pixel_avatar.png',
+  },
+  {
     name: 'TetrisTwist',
     description:
-      "A 3D puzzle game combining Tetris mechanics with Rubik's Cube rotations and perspective shifts inspired by Fez.",
+      '3D Tetris‑style game in Three.js/WebGL with a lightweight physics loop, smooth transforms, and responsive controls.',
     link: 'https://tetristwist.heyanabelle.com',
     imageUrl: '/images/tetris.png',
     technologies: ['Three.js', 'WebGL', 'React', 'TypeScript'],
@@ -18,7 +35,7 @@ export const experiments: Experiment[] = [
   {
     name: 'Multiplayer Snake',
     description:
-      'Real-time multiplayer implementation of the classic Snake game with competitive gameplay and leaderboards.',
+      'Real‑time multiplayer Snake with client‑server sync, collision handling, and persistent leaderboards.',
     link: 'https://snake.heyanabelle.com',
     imageUrl: '/images/snake.png',
     technologies: ['Socket.IO', 'Canvas API', 'Node.js', 'React'],

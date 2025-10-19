@@ -37,6 +37,9 @@ import { experiments } from '../../edit-me/data/experiments';
 // ];
 
 export function PersonalExperiments() {
+  const featured = experiments.find((e) => (e as any).featured);
+  const others = experiments.filter((e) => !(e as any).featured);
+
   return (
     <section className={styles.sectionStyle}>
       <h2 className={styles.sectionTitleStyle}>
@@ -44,7 +47,59 @@ export function PersonalExperiments() {
         <span>Personal Projects</span>
       </h2>
       <div className={styles.projectContainerStyle}>
-        {experiments.map((exp) => (
+        {featured && (
+          <Link
+            key={featured.name}
+            href={featured.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.projectCardFeatured}
+            aria-label={`${featured.name} (opens in new tab)`}
+            style={{ textDecoration: 'none' }}
+          >
+            <div className={styles.imageBannerFeaturedStyle}>
+              <Image
+                src={featured.imageUrl}
+                alt={`${featured.name} screenshot`}
+                fill
+                sizes="100vw"
+                className=""
+              />
+              {featured.avatarUrl && (
+                <div className={styles.featuredAvatarWrapper}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={featured.avatarUrl}
+                    alt={`${featured.name} avatar`}
+                    className={styles.featuredAvatarImg}
+                  />
+                </div>
+              )}
+            </div>
+
+            <div className={styles.contentAreaStyle}>
+              <span className={styles.imageTitleStyle}>{featured.name}</span>
+
+              <div className={styles.techListStyle}>
+                {featured.technologies.map((tech) => (
+                  <span key={tech} className={styles.techTagStyle}>
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <p className={styles.descriptionStyle}>{featured.description}</p>
+              <span className={styles.viewLinkStyle}>
+                Meet Pixel
+                <FontAwesomeIcon
+                  icon={faExternalLinkAlt}
+                  className={styles.viewLinkIconStyle}
+                />
+              </span>
+            </div>
+          </Link>
+        )}
+
+        {others.map((exp) => (
           <Link
             key={exp.name}
             href={exp.link}
@@ -76,7 +131,7 @@ export function PersonalExperiments() {
               </div>
               <p className={styles.descriptionStyle}>{exp.description}</p>
               <span className={styles.viewLinkStyle}>
-                View Live Demo
+                View Project
                 <FontAwesomeIcon
                   icon={faExternalLinkAlt}
                   className={styles.viewLinkIconStyle}

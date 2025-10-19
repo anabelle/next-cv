@@ -54,6 +54,20 @@ export const projectCardNonLink = style([
   },
 ]);
 
+// Featured card should span full width of the container
+export const projectCardFeatured = style([
+  atoms({ borderRadius: 'rounded' }),
+  {
+    overflow: 'hidden',
+    boxShadow:
+      '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+    marginBottom: mapSpacer(4),
+    flex: '1 1 100%',
+    maxWidth: '100%',
+    position: 'relative',
+  },
+]);
+
 export const imageBannerStyle = style([
   atoms({
     // position: 'relative', // Moved to plain style
@@ -68,6 +82,39 @@ export const imageBannerStyle = style([
     width: '100%', // Plain CSS for full width
   },
 ]);
+
+// Taller banner for featured card
+export const imageBannerFeaturedStyle = style([
+  atoms({ backgroundColor: 'dark' }),
+  {
+    position: 'relative',
+    overflow: 'visible',
+    height: '240px',
+    width: '100%',
+  },
+]);
+
+// Circle avatar overlay for featured card
+export const featuredAvatarWrapper = style({
+  position: 'absolute',
+  bottom: '-32px',
+  right: '24px',
+  width: '80px',
+  height: '80px',
+  borderRadius: '50%',
+  overflow: 'hidden',
+  boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1)',
+  border: '3px solid rgba(255, 255, 255, 0.9)',
+  backgroundColor: '#111',
+  zIndex: 10,
+});
+
+export const featuredAvatarImg = style({
+  display: 'block',
+  width: '100%',
+  height: '100%',
+  objectFit: 'cover',
+});
 
 // Using globalStyle for img within banner
 globalStyle(`${imageBannerStyle} > img`, {
@@ -106,6 +153,8 @@ export const contentAreaStyle = style([
     backgroundColor: rgba(0, 0, 0, 0.99), // ADDED semi-transparent background here
     flexDirection: 'column',
     gap: mapSpacer(2),
+    position: 'relative',
+    zIndex: 1,
   },
 ]);
 
