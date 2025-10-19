@@ -64,61 +64,63 @@ const ResumeLayout: React.FC<ResumePageProps> = (props) => {
 
       <Header secret={secret} {...props} />
 
-      <Section color="standard">
-        <Row>
-          {/* Main Content Column - Wider */}
-          <Column width={{ xs: 12, lg: 8 }}>
-            <AboutMe personalInformation={personalInformation} />
+      <main>
+        <Section color="standard">
+          <Row>
+            {/* Main Content Column - Wider */}
+            <Column width={{ xs: 12, lg: 8 }}>
+              <AboutMe personalInformation={personalInformation} />
 
-            <ContactInformation
-              personalInformation={personalInformation}
-              privateInformation={privateInformation}
-            />
+              <ContactInformation
+                personalInformation={personalInformation}
+                privateInformation={privateInformation}
+              />
 
-            {/* Render Languages skill */}
-            {languagesSkill && (
-              <Box marginTop={4}>
-                <Heading level={4}>{languagesSkill.attributes.title}</Heading>
-                <div
-                  dangerouslySetInnerHTML={{ __html: languagesSkill.html }}
-                />
-              </Box>
-            )}
-          </Column>
-          {/* Sidebar Column - Narrower */}
-          <Column width={{ xs: 12, lg: 4 }}>
-            {/* Render Personal Projects FIRST */}
-            <PersonalExperiments />
-          </Column>
-        </Row>
+              {/* Render Languages skill */}
+              {languagesSkill && (
+                <Box marginTop={4}>
+                  <Heading level={4}>{languagesSkill.attributes.title}</Heading>
+                  <div
+                    dangerouslySetInnerHTML={{ __html: languagesSkill.html }}
+                  />
+                </Box>
+              )}
+            </Column>
+            {/* Sidebar Column - Narrower */}
+            <Column width={{ xs: 12, lg: 4 }}>
+              {/* Render Personal Projects FIRST */}
+              <PersonalExperiments />
+            </Column>
+          </Row>
 
-        {/* Render remaining skills in the main grid (now below the first row) */}
-        {otherSkills.length > 0 && <Skills skills={otherSkills} />}
-      </Section>
+          {/* Render remaining skills in the main grid (now below the first row) */}
+          {otherSkills.length > 0 && <Skills skills={otherSkills} />}
+        </Section>
 
-      <Section color="alternate">
-        <Box marginBottom={6}>
-          <SectionHeader icon={faBriefcase} text="Professional Experience" />
-        </Box>
+        <Section color="alternate">
+          <Box marginBottom={6}>
+            <SectionHeader icon={faBriefcase} text="Professional Experience" />
+          </Box>
 
-        {professional.map((experience) => (
-          <ProfessionalItem key={experience.slug} {...experience} />
-        ))}
-      </Section>
+          {professional.map((experience) => (
+            <ProfessionalItem key={experience.slug} {...experience} />
+          ))}
+        </Section>
 
-      <Section color="standard">
-        <Box marginBottom={6}>
-          <SectionHeader icon={faGraduationCap} text="Education" />
-        </Box>
+        <Section color="standard">
+          <Box marginBottom={6}>
+            <SectionHeader icon={faGraduationCap} text="Education" />
+          </Box>
 
-        {education.map((experience) => (
-          <EducationItem key={experience.slug} {...experience} />
-        ))}
-      </Section>
+          {education.map((experience) => (
+            <EducationItem key={experience.slug} {...experience} />
+          ))}
+        </Section>
 
-      <Section color="alternate">
-        <NotableProjects notableProjects={notableProjects} />
-      </Section>
+        <Section color="alternate">
+          <NotableProjects notableProjects={notableProjects} />
+        </Section>
+      </main>
 
       <Footer links={links} personalInformation={personalInformation} />
     </>

@@ -19,7 +19,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = (props) => {
 
   return (
     <Heading level={3}>
-      <span className={iconClasses}>
+      <span className={iconClasses} aria-hidden>
         <FontAwesomeIcon
           color={darkMode ? colors.white : colors.dark}
           icon={faCircle}

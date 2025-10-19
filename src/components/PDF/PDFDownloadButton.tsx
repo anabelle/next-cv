@@ -22,6 +22,7 @@ const PDFDownloadButton: React.FC<PDFDownloadButtonProps> = (props) => {
       })}
       href={secret ? `/api/pdf?secret=${secret}` : '/api/pdf'}
       target="_blank"
+      rel="noopener noreferrer"
     >
       <FontAwesomeIcon className={atoms({ marginRight: 2 })} icon={faFilePdf} />
       View or Download PDF

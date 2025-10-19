@@ -32,7 +32,15 @@ const ContactInformation: React.FC<ContactInformationProps> = (props) => {
             <Column width={{ xs: 'auto' }}>
               <strong>E-mail:</strong>
             </Column>
-            <Column>{personalInformation.attributes.email}</Column>
+            <Column>
+              {personalInformation.attributes.email ? (
+                <a href={`mailto:${personalInformation.attributes.email}`}>
+                  {personalInformation.attributes.email}
+                </a>
+              ) : (
+                '—'
+              )}
+            </Column>
           </Row>
         </NavListItem>
         {privateInformation &&

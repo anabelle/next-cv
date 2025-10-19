@@ -34,6 +34,7 @@ const PageHead: React.FC<PageHeadProps> = (props) => {
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
+      <link rel="canonical" href={url} />
 
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
@@ -43,6 +44,7 @@ const PageHead: React.FC<PageHeadProps> = (props) => {
       />
       <meta property="og:description" content={description} />
       <meta property="og:type" content="profile" />
+      <meta property="og:locale" content="en_US" />
       <meta
         property="profile:first_name"
         content={personalInformation.attributes.givenName}
@@ -52,7 +54,6 @@ const PageHead: React.FC<PageHeadProps> = (props) => {
         content={personalInformation.attributes.familyName}
       />
 
-      <meta name="twitter:card" content="summary" />
       {personalInformation.attributes.twitterUsername && (
         <>
           <meta
@@ -70,10 +71,30 @@ const PageHead: React.FC<PageHeadProps> = (props) => {
 
       {/* Share images served from https://ogimpact.sh/ */}
       <meta property="og:image" content={ogImg} />
+      <meta property="og:image:alt" content={`${fullName} – Resume preview`} />
       <meta name="image" content={ogImg} />
       <meta itemProp="image" content={ogImg} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:image" content={ogImg} />
+
+      {/* Structured data for SEO */}
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            name: fullName,
+            jobTitle: personalInformation.attributes.title,
+            url,
+            email: personalInformation.attributes.email
+              ? `mailto:${personalInformation.attributes.email}`
+              : undefined,
+            address: personalInformation.attributes.location,
+          }),
+        }}
+      />
     </Head>
   );
 };
