@@ -1,6 +1,6 @@
 ---
 organization: Publicis Groupe
-startDate: Jun 2022
+startDate: Jul 2025
 endDate: Present
 title: Experience Technology Architect (Razorfish)
 location: Bogotá, Capital District, Colombia
