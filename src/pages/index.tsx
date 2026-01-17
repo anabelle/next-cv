@@ -122,11 +122,11 @@ const experience = [
     role: 'Experience Technology Architect',
     period: 'Jul 2025 – Present',
     summary:
-      "Creating omni-channel engagement by delivering uniquely personalized and unforgettable experiences that connect and enrich people's lives.",
+      'Architecting tomorrow’s experiences through innovation, accessibility, and technical excellence.',
     bullets: [
       'Define architecture standards adopted across multiple delivery teams.',
-      'Drive Core Web Vitals and OWASP-aligned security reviews.',
-      'Partner with design and product leadership on strategic initiatives.',
+      'Lead global AI usage guidelines and enablement across the organization.',
+      'Deliver internal talks on AI tooling, workflows, and best practices.',
     ],
   },
   {
