@@ -670,6 +670,12 @@ ul {
   .links a {
     letter-spacing: 0.12em;
   }
+
+  .section__header h2 {
+    font-size: 1.3rem;
+    letter-spacing: 0.06em;
+    text-wrap: balance;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
