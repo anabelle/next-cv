@@ -1,12 +1,6 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document';
-import { timbre } from '../strum-design-system/themes';
 
 class MyDocument extends Document {
-  static async getInitialProps(ctx) {
-    const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
-  }
-
   render() {
     return (
       <Html lang="en">
@@ -15,14 +9,14 @@ class MyDocument extends Document {
           <link
             rel="preconnect"
             href="https://fonts.gstatic.com"
-            crossOrigin="anonymous"
+            crossOrigin=""
           />
           <link
-            href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=optional"
             rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=Orbitron:wght@500;700&display=swap"
           />
         </Head>
-        <body className={timbre}>
+        <body>
           <Main />
           <NextScript />
         </body>
