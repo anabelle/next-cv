@@ -594,6 +594,7 @@ ul {
   font-weight: 600;
   color: var(--text);
   margin-right: 8px;
+  white-space: nowrap;
 }
 
 @media (max-width: 980px) {
