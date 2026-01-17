@@ -122,7 +122,7 @@ const experience = [
     role: 'Experience Technology Architect',
     period: 'Jul 2025 – Present',
     summary:
-      'Architecting omni-channel experiences for global brands. Own technical direction across performance, accessibility, privacy, and security.',
+      "Creating omni-channel engagement by delivering uniquely personalized and unforgettable experiences that connect and enrich people's lives.",
     bullets: [
       'Define architecture standards adopted across multiple delivery teams.',
       'Drive Core Web Vitals and OWASP-aligned security reviews.',
@@ -134,11 +134,11 @@ const experience = [
     role: 'Senior Experience Technology Engineer',
     period: 'Oct 2023 – Jul 2025',
     summary:
-      'Led frontend engineering for a healthcare platform redesign serving 120M+ users with strict performance, privacy, and accessibility requirements.',
+      "Led the front-end engineering team for the redesign of a major healthcare brand's website serving 120M+ users with strict performance, privacy, and accessibility requirements.",
     bullets: [
-      'Delivered performance optimization playbooks adopted org-wide.',
-      'Mentored engineers and led PGD OnChain innovation initiatives.',
-      'Integrated frontend and backend systems across distributed teams.',
+      'Ensured AA accessibility, legal, and security compliance.',
+      'Integrated frontend and backend systems with cross-functional teams.',
+      'Collaborated with designers and product managers on user-centered delivery.',
     ],
   },
   {
