@@ -216,10 +216,13 @@ const awards = [
 ];
 
 const links = [
-  { label: 'GitHub', href: 'https://github.com/' },
-  { label: 'LinkedIn', href: 'https://linkedin.com/' },
-  { label: 'X', href: 'https://x.com/' },
-  { label: 'Nostr', href: 'https://nostr.com/' },
+  { label: 'GitHub', href: 'https://github.com/anabelle' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/heyanabelle/' },
+  { label: 'X', href: 'https://x.com/heyanabelle' },
+  {
+    label: 'Nostr',
+    href: 'https://primal.net/p/nprofile1qqsdcmn9eaw7pfykhwr2uq3ps39nkj9a8k3xg0xahn35ucr4ftzmn9czsqwxy',
+  },
   { label: 'lagentedelcomun.info', href: 'https://lagentedelcomun.info/' },
   { label: '8manos.com/trabajo', href: 'https://8manos.com/trabajo/' },
 ];
