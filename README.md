@@ -16,7 +16,7 @@ Personal portfolio and résumé website built with Next.js, React, and TypeScrip
 - [TypeScript](https://www.typescriptlang.org/) - Type safety
 - [React](https://react.dev/) - UI library
 - [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework (not currently used, but configured)
-- [Vercel](https://vercel.com/) - Deployment platform
+- [Netlify](https://www.netlify.com/) - Deployment platform
 
 ## Getting Started
 
@@ -95,7 +95,7 @@ Global styles are in `src/styles/globals.css`. Key CSS variables:
 
 ## Deployment
 
-This project is configured for deployment on Vercel. Simply connect your Git repository to Vercel and it will automatically deploy on push.
+This project is deployed on Netlify. Simply connect your Git repository to Netlify and it will automatically deploy on push.
 
 ## License
 
