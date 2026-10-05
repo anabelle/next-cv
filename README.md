@@ -1,10 +1,10 @@
 # Anabelle Handdoek · Senior Software Architect
 
-Personal portfolio and résumé website built with Next.js, React, and TypeScript. Designed with a cyberpunk aesthetic featuring neon accents, dark theme, and responsive layout.
+Personal portfolio and résumé website built with Next.js, React, and TypeScript. Editorial, typography-led design with automatic light and dark themes and a responsive layout.
 
 ## Features
 
-- **Cyberpunk Design**: Dark theme with neon cyan and magenta accents
+- **Editorial Design**: Instrument Serif display type, Geist body text, a single indigo accent, and light/dark themes that follow the system setting
 - **Fully Responsive**: Mobile-first design that scales to all screen sizes
 - **Accessibility**: WCAG compliant with skip links, focus states, and semantic HTML
 - **Performance Optimized**: Next.js static generation with image optimization
@@ -86,12 +86,13 @@ All content is located in `src/pages/index.tsx`. Modify the data arrays to updat
 
 Global styles are in `src/styles/globals.css`. Key CSS variables:
 
-- `--bg` - Background color
-- `--neon` - Primary accent color (cyan)
-- `--magenta` - Secondary accent color
-- `--sunset` - Tertiary accent color
-- `--text` - Text color
-- `--muted` - Secondary text color
+- `--bg` / `--surface` - Page and image-well backgrounds
+- `--text` / `--muted` / `--faint` - Primary, secondary and tertiary text
+- `--rule` / `--rule-strong` - Hairline dividers
+- `--accent` - The single accent color (indigo)
+- `--font-sans` / `--font-serif` / `--font-mono` - Type families
+
+Every color token is redefined under `@media (prefers-color-scheme: dark)`.
 
 ## Deployment
 
