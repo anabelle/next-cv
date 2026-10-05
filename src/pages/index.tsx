@@ -8,12 +8,12 @@ const achievements = [
     description: 'Shipping production software at scale',
   },
   {
-    label: '120M+ Users',
-    description: 'Healthcare platform redesign',
+    label: '120M+ Clients',
+    description: 'Healthcare brand behind the site redesign',
   },
   {
-    label: 'WCAG 2.1 AA',
-    description: 'Accessibility-first architecture',
+    label: 'WCAG 2.2',
+    description: 'Compliance verified by Cypress end-to-end tests',
   },
   {
     label: 'OWASP',
@@ -61,41 +61,68 @@ const skills = [
 ];
 
 const agentic = {
-  lead: 'Extending software architecture into AI-assisted engineering: designing how humans and coding agents divide, review, and verify work.',
+  lead: 'Extending software architecture into agentic engineering: building the pipelines, frameworks, and guardrails that let humans and coding agents divide, review, and verify work.',
   focus: [
     {
-      title: 'Orchestration',
-      text: 'Directs experiments integrating interactive coding agents and persistent assistants across local and remote environments.',
+      title: 'Build',
+      text: 'Custom agent pipelines and auth, frameworks on Pi agent-core, Hermes plugins, and Claude Code integrations.',
     },
     {
-      title: 'Workflow design',
-      text: 'Shapes workflows around explicit briefs, bounded delegation, independent review, artifact verification, and retained context.',
+      title: 'Orchestrate',
+      text: 'Brain/hands separation: an orchestrator delegates code changes to ephemeral worker containers, tracked in a persistent task ledger.',
     },
     {
-      title: 'Reliability',
-      text: 'Explores operational safeguards for agent execution, including model identity, cost boundaries, uncertain dispatch, and recovery.',
+      title: 'Verify',
+      text: 'Explicit agent briefs and repo-level engineering rules, bounded delegation, independent review, and safeguards for uncertain dispatch and recovery.',
     },
   ],
   practices: [
-    'Explicit briefs',
-    'Bounded delegation',
+    'Pi agent-core',
+    'Hermes plugins',
+    'Claude Code',
+    'Multi-agent workflows',
     'Independent review',
-    'Artifact verification',
-    'Retained context',
     'Human sign-off',
   ],
 };
 
-const projects = [
+type Project = {
+  title: string;
+  description: string;
+  tags: string[];
+  href: string;
+  repo?: string;
+  image?: string;
+  width?: number;
+  height?: number;
+};
+
+const projects: Project[] = [
   {
     title: 'Pixel Survivor',
     description:
-      'Autonomous AI agent that promotes art and sells pixels via Bitcoin Lightning. Full-stack system with real-time canvas, social-aware AI content generation, and self-improvement algorithms.',
-    tags: ['Autonomous AI', 'Bitcoin', 'Lightning', 'Nostr'],
+      'Autonomous, Bitcoin-native AI artist with a public Lightning canvas. Its agent brain runs on Pi agent-core across platforms, overseen by Syntropy, an orchestrator that delegates code changes to ephemeral worker agents.',
+    tags: ['Autonomous AI', 'Pi agent-core', 'Lightning', 'Nostr'],
     image: '/images/pixel.png',
     width: 1703,
     height: 1371,
     href: 'https://pixel.xx.kg',
+    repo: 'https://github.com/anabelle/pixel',
+  },
+  {
+    title: 'ACARS',
+    description:
+      'Open-source airline-management MMO on Nostr with no central database: a deterministic, fixed-point game engine reduces signed events into state. Built agent-first, with an explicit onboarding contract for AI contributors.',
+    tags: ['Nostr', 'React 19', 'Deterministic engine', 'Agentic dev'],
+    href: 'https://acars.pub',
+    repo: 'https://github.com/anabelle/acars.pub',
+  },
+  {
+    title: 'Bombolo',
+    description:
+      'Site and public climate observatory for a native Andean tree nursery in Tenjo: static site on Cloudflare Pages plus a live weather service, from sensor sender to SQLite API and dashboard, that never shows stale data as current.',
+    tags: ['Cloudflare Pages', 'Python', 'SQLite', 'IoT'],
+    href: 'https://bombolo.bio',
   },
   {
     title: 'TetrisTwist',
@@ -106,6 +133,7 @@ const projects = [
     width: 715,
     height: 808,
     href: 'https://tetristwist.heyanabelle.com',
+    repo: 'https://github.com/anabelle/TetrisTwist3D',
   },
   {
     title: 'Multiplayer Snake',
@@ -116,6 +144,7 @@ const projects = [
     width: 677,
     height: 462,
     href: 'https://snake.heyanabelle.com',
+    repo: 'https://github.com/anabelle/p2p-snake',
   },
 ];
 
@@ -163,6 +192,7 @@ const experience = [
       'Define architecture standards adopted across multiple delivery teams.',
       'Lead global AI usage guidelines and enablement across the organization.',
       'Deliver internal talks on AI tooling, workflows, and best practices.',
+      'Adopted agentic orchestration on a client project to reach 100% unit test coverage and WCAG 2.2 compliance verified by Cypress end-to-end tests.',
     ],
   },
   {
@@ -170,7 +200,7 @@ const experience = [
     role: 'Senior Experience Technology Engineer',
     period: 'Oct 2023 – Jul 2025',
     summary:
-      "Led the front-end engineering team for the redesign of a major healthcare brand's website serving 120M+ users with strict performance, privacy, and accessibility requirements.",
+      "Led the front-end engineering team for the redesign of a major healthcare brand's website, a brand with 120M+ clients, under strict performance, privacy, and accessibility requirements.",
     bullets: [
       'Ensured AA accessibility, legal, and security compliance.',
       'Integrated frontend and backend systems with cross-functional teams.',
@@ -234,11 +264,13 @@ const education = [
 const awards = [
   {
     title: 'Premio Gabo 2020 · Reconocimiento Clemente Manuel Zabala',
-    detail: 'Cerosetenta – excellence in digital journalism.',
+    detail:
+      'Cerosetenta and our studio behind the site – excellence in digital journalism.',
   },
   {
     title: 'Lápiz de Acero · Best Website 2015',
-    detail: "Cerosetenta – recognized as Colombia's best website.",
+    detail:
+      "Cerosetenta and our studio behind the site – recognized as Colombia's best website.",
   },
   {
     title: 'PautaVisible',
@@ -368,8 +400,7 @@ const IndexPage = () => {
               <p>
                 Founder of 8manos. Creator of award-winning platforms including
                 Colombia&apos;s Peace Process Open Library. Currently
-                architecting omni-channel experiences at Publicis Groupe for
-                120M+ users.
+                architecting omni-channel experiences at Publicis Groupe.
               </p>
               <p>
                 Deep expertise in React, Next.js, TypeScript, accessibility
@@ -457,9 +488,18 @@ const IndexPage = () => {
                 ))}
               </ul>
               <p className="agentic__note">
-                Personal lab, run separately from employer work. Public example:{' '}
-                <a href="#projects">Pixel Survivor</a>, an autonomous agent
-                operating in the open.
+                Built in an independent lab and applied in client delivery (see{' '}
+                <a href="#experience">Experience</a>). Public work:{' '}
+                <a href="#projects">Pixel Survivor, ACARS, and Bombolo</a>, plus
+                source on{' '}
+                <a
+                  href="https://github.com/anabelle"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  GitHub
+                </a>
+                .
               </p>
             </div>
           </Section>
@@ -538,7 +578,7 @@ const IndexPage = () => {
             id="projects"
             index="05"
             title="Personal Projects"
-            intro="Autonomous systems, experimental games, and real-time platforms."
+            intro="Agentic systems, decentralized platforms, live data services, and experimental games."
           >
             <div className="project-grid">
               {projects.map((project) => (
@@ -551,13 +591,20 @@ const IndexPage = () => {
                     tabIndex={-1}
                     aria-hidden="true"
                   >
-                    <Image
-                      src={project.image}
-                      alt=""
-                      width={project.width}
-                      height={project.height}
-                      sizes="(max-width: 720px) 100vw, 360px"
-                    />
+                    {project.image ? (
+                      <Image
+                        src={project.image}
+                        alt=""
+                        width={project.width}
+                        height={project.height}
+                        sizes="(max-width: 720px) 100vw, 360px"
+                      />
+                    ) : (
+                      <span className="project__placeholder">
+                        <span>{project.title}</span>
+                        <span>{new URL(project.href).host}</span>
+                      </span>
+                    )}
                   </a>
                   <h3>
                     <a href={project.href} target="_blank" rel="noreferrer">
@@ -571,6 +618,16 @@ const IndexPage = () => {
                       <li key={tag}>{tag}</li>
                     ))}
                   </ul>
+                  {project.repo && (
+                    <a
+                      className="project__repo"
+                      href={project.repo}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Source on GitHub <span aria-hidden="true">↗</span>
+                    </a>
+                  )}
                 </article>
               ))}
             </div>

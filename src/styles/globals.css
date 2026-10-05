@@ -633,6 +633,45 @@ a.row:hover .row__arrow {
   transform: scale(1.03);
 }
 
+.project__placeholder {
+  display: grid;
+  align-content: end;
+  gap: 4px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background: radial-gradient(
+      circle at 85% 15%,
+      color-mix(in srgb, var(--accent) 28%, transparent),
+      transparent 55%
+    ),
+    var(--surface);
+}
+
+.project__placeholder span:first-child {
+  font-family: var(--font-serif);
+  font-size: 2.25rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.project__placeholder span:last-child {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.project__repo {
+  justify-self: start;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.project__repo:hover {
+  color: var(--accent);
+}
+
 .project h3 {
   font-size: 1.0625rem;
   font-weight: 600;
