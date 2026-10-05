@@ -12,7 +12,7 @@ const achievements = [
     description: 'Healthcare brand behind the site redesign',
   },
   {
-    label: 'WCAG 2.2',
+    label: 'WCAG 2.2 AA',
     description: 'Compliance verified by Cypress end-to-end tests',
   },
   {
@@ -192,7 +192,7 @@ const experience = [
       'Define architecture standards adopted across multiple delivery teams.',
       'Lead global AI usage guidelines and enablement across the organization.',
       'Deliver internal talks on AI tooling, workflows, and best practices.',
-      'Adopted agentic orchestration on a client project to reach 100% unit test coverage and WCAG 2.2 compliance verified by Cypress end-to-end tests.',
+      'Adopted agentic orchestration on a client project to reach 100% unit test coverage and WCAG 2.2 AA compliance verified by Cypress end-to-end tests.',
     ],
   },
   {
@@ -265,12 +265,12 @@ const awards = [
   {
     title: 'Premio Gabo 2020 · Reconocimiento Clemente Manuel Zabala',
     detail:
-      'Cerosetenta and our studio behind the site – excellence in digital journalism.',
+      'Cerosetenta and 8manos (the studio behind the site) – excellence in digital journalism.',
   },
   {
     title: 'Lápiz de Acero · Best Website 2015',
     detail:
-      "Cerosetenta and our studio behind the site – recognized as Colombia's best website.",
+      "Cerosetenta and 8manos (the studio behind the site) – recognized as Colombia's best website.",
   },
   {
     title: 'PautaVisible',
