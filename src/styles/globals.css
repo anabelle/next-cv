@@ -216,6 +216,12 @@ em {
   letter-spacing: -0.01em;
 }
 
+.hero__agentic {
+  color: var(--text);
+  padding-left: 14px;
+  border-left: 2px solid var(--accent);
+}
+
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
@@ -396,7 +402,7 @@ em {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 32px;
   padding-top: 24px;
 }
@@ -412,6 +418,76 @@ em {
   gap: 8px;
   color: var(--muted);
   font-size: 0.9375rem;
+}
+
+/* Agentic engineering */
+
+.agentic {
+  display: grid;
+  gap: 28px;
+  padding-top: 24px;
+}
+
+.agentic__lead {
+  font-family: var(--font-serif);
+  font-size: clamp(1.625rem, 2.8vw, 2.25rem);
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+  text-wrap: pretty;
+}
+
+.agentic__focus {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  counter-reset: focus;
+}
+
+.agentic__focus li {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  padding: 20px;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--accent) 7%, var(--bg));
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+  counter-increment: focus;
+}
+
+.agentic__focus h3 {
+  font-size: 0.9375rem;
+  font-weight: 600;
+}
+
+.agentic__focus h3::before {
+  content: counter(focus, decimal-leading-zero);
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.agentic__focus p {
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.agentic__note {
+  color: var(--faint);
+  font-size: 0.875rem;
+}
+
+.agentic__note a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--rule-strong);
+  text-underline-offset: 3px;
+}
+
+.agentic__note a:hover {
+  color: var(--accent);
 }
 
 /* Experience timeline */
@@ -715,6 +791,10 @@ a.row:hover .row__arrow {
   .project-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .agentic__focus {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 @media (max-width: 640px) {
@@ -737,6 +817,7 @@ a.row:hover .row__arrow {
   }
 
   .skills-grid,
+  .agentic__focus,
   .project-grid,
   .two-column {
     grid-template-columns: minmax(0, 1fr);

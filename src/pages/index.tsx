@@ -23,6 +23,15 @@ const achievements = [
 
 const skills = [
   {
+    title: 'AI-Assisted Engineering',
+    items: [
+      'Agent orchestration & multi-agent workflows',
+      'Human-in-the-loop review & evaluation',
+      'Persistent context & knowledge continuity',
+      'Safeguards for agent execution',
+    ],
+  },
+  {
     title: 'Core Technologies',
     items: [
       'JavaScript, TypeScript, CSS, HTML',
@@ -50,6 +59,32 @@ const skills = [
     ],
   },
 ];
+
+const agentic = {
+  lead: 'Extending software architecture into AI-assisted engineering: designing how humans and coding agents divide, review, and verify work.',
+  focus: [
+    {
+      title: 'Orchestration',
+      text: 'Directs experiments integrating interactive coding agents and persistent assistants across local and remote environments.',
+    },
+    {
+      title: 'Workflow design',
+      text: 'Shapes workflows around explicit briefs, bounded delegation, independent review, artifact verification, and retained context.',
+    },
+    {
+      title: 'Reliability',
+      text: 'Explores operational safeguards for agent execution, including model identity, cost boundaries, uncertain dispatch, and recovery.',
+    },
+  ],
+  practices: [
+    'Explicit briefs',
+    'Bounded delegation',
+    'Independent review',
+    'Artifact verification',
+    'Retained context',
+    'Human sign-off',
+  ],
+};
 
 const projects = [
   {
@@ -236,6 +271,7 @@ const languages = [
 ];
 
 const nav = [
+  { label: 'Agents', href: '#agentic' },
   { label: 'Experience', href: '#experience' },
   { label: 'Work', href: '#work' },
   { label: 'Projects', href: '#projects' },
@@ -268,11 +304,11 @@ const IndexPage = () => {
         <title>Anabelle Handdoek · Senior Software Architect</title>
         <meta
           name="description"
-          content="Senior Software Architect with 20+ years shipping accessible, secure, high-performance web applications for global brands. Currently leading technical direction at Publicis Groupe."
+          content="Senior Software Architect with 20+ years shipping accessible, secure, high-performance web applications for global brands. Currently leading technical direction at Publicis Groupe and experimenting hands-on with agentic engineering and AI workflow architecture."
         />
         <meta
           name="keywords"
-          content="Senior Software Architect, Full Stack Engineer, React, Next.js, TypeScript, accessibility, WCAG, OWASP, web3, AI"
+          content="Senior Software Architect, Full Stack Engineer, React, Next.js, TypeScript, accessibility, WCAG, OWASP, agentic engineering, AI-assisted engineering, agent orchestration, human-in-the-loop, web3"
         />
         <meta name="author" content="Anabelle Handdoek" />
         <meta
@@ -310,7 +346,7 @@ const IndexPage = () => {
         <header className="hero">
           <p className="eyebrow">
             <span className="status-dot" aria-hidden="true" />
-            Senior Software Architect · Bogotá
+            Software Architect · Agentic Engineering · Bogotá
           </p>
           <h1 className="title">
             Anabelle <em>Handdoek</em>
@@ -324,6 +360,11 @@ const IndexPage = () => {
                 direction where quality, compliance, and user experience
                 converge.
               </p>
+              <p className="hero__agentic">
+                Extends software architecture into AI-assisted engineering,
+                experimenting hands-on with persistent agents, multi-agent
+                workflows, and human-in-the-loop delivery.
+              </p>
               <p>
                 Founder of 8manos. Creator of award-winning platforms including
                 Colombia&apos;s Peace Process Open Library. Currently
@@ -332,16 +373,16 @@ const IndexPage = () => {
               </p>
               <p>
                 Deep expertise in React, Next.js, TypeScript, accessibility
-                (WCAG/ARIA), and security (OWASP). Passionate about FOSS, AI
-                agents, web3, and building technology that matters.
+                (WCAG/ARIA), and security (OWASP). Committed to FOSS, web3, and
+                building technology that matters.
               </p>
               <div className="hero__actions">
                 <a className="button" href="mailto:ana@8manos.com">
                   Start a conversation
                   <span aria-hidden="true">→</span>
                 </a>
-                <a className="button button--ghost" href="#experience">
-                  View experience
+                <a className="button button--ghost" href="#agentic">
+                  Agentic engineering
                 </a>
               </div>
             </div>
@@ -395,7 +436,36 @@ const IndexPage = () => {
 
         <main id="content" className="content">
           <Section
+            id="agentic"
             index="01"
+            title="Agentic Engineering"
+            intro="Independent R&D. The current extension of two decades of software architecture."
+          >
+            <div className="agentic">
+              <p className="agentic__lead">{agentic.lead}</p>
+              <ol className="agentic__focus">
+                {agentic.focus.map((item) => (
+                  <li key={item.title}>
+                    <h3>{item.title}</h3>
+                    <p>{item.text}</p>
+                  </li>
+                ))}
+              </ol>
+              <ul className="tag-list" aria-label="Working principles">
+                {agentic.practices.map((practice) => (
+                  <li key={practice}>{practice}</li>
+                ))}
+              </ul>
+              <p className="agentic__note">
+                Personal lab, run separately from employer work. Public example:{' '}
+                <a href="#projects">Pixel Survivor</a>, an autonomous agent
+                operating in the open.
+              </p>
+            </div>
+          </Section>
+
+          <Section
+            index="02"
             title="Expertise"
             intro="Daily practice across the full product lifecycle."
           >
@@ -415,7 +485,7 @@ const IndexPage = () => {
 
           <Section
             id="experience"
-            index="02"
+            index="03"
             title="Experience"
             intro="Leading technical direction, mentoring engineers, and delivering global-scale digital products."
           >
@@ -440,7 +510,7 @@ const IndexPage = () => {
 
           <Section
             id="work"
-            index="03"
+            index="04"
             title="Featured Work"
             intro="Flagship platforms with national and international reach."
           >
@@ -466,7 +536,7 @@ const IndexPage = () => {
 
           <Section
             id="projects"
-            index="04"
+            index="05"
             title="Personal Projects"
             intro="Autonomous systems, experimental games, and real-time platforms."
           >
@@ -507,7 +577,7 @@ const IndexPage = () => {
           </Section>
 
           <Section
-            index="05"
+            index="06"
             title="Recognition"
             intro="Selected awards and industry acknowledgment."
           >
@@ -522,7 +592,7 @@ const IndexPage = () => {
           </Section>
 
           <Section
-            index="06"
+            index="07"
             title="Education"
             intro="Continuous investment in craft and leadership."
           >
@@ -541,7 +611,7 @@ const IndexPage = () => {
             className="contact"
             aria-labelledby="contact-title"
           >
-            <span className="section__index">07</span>
+            <span className="section__index">08</span>
             <h2 id="contact-title" className="contact__title">
               Let&apos;s build something <em>that matters.</em>
             </h2>
