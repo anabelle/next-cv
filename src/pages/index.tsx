@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 
@@ -234,6 +235,32 @@ const languages = [
   'Japanese (Basic)',
 ];
 
+const nav = [
+  { label: 'Experience', href: '#experience' },
+  { label: 'Work', href: '#work' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Contact', href: '#contact' },
+];
+
+type SectionProps = {
+  id?: string;
+  index: string;
+  title: string;
+  intro: string;
+  children: ReactNode;
+};
+
+const Section = ({ id, index, title, intro, children }: SectionProps) => (
+  <section id={id} className="section" aria-labelledby={`${id ?? index}-title`}>
+    <div className="section__header">
+      <span className="section__index">{index}</span>
+      <h2 id={`${id ?? index}-title`}>{title}</h2>
+      <p>{intro}</p>
+    </div>
+    <div className="section__body">{children}</div>
+  </section>
+);
+
 const IndexPage = () => {
   return (
     <>
@@ -248,100 +275,133 @@ const IndexPage = () => {
           content="Senior Software Architect, Full Stack Engineer, React, Next.js, TypeScript, accessibility, WCAG, OWASP, web3, AI"
         />
         <meta name="author" content="Anabelle Handdoek" />
-        <meta name="theme-color" content="#0b0c14" />
+        <meta
+          name="theme-color"
+          content="#f5f3ee"
+          media="(prefers-color-scheme: light)"
+        />
+        <meta
+          name="theme-color"
+          content="#111110"
+          media="(prefers-color-scheme: dark)"
+        />
       </Head>
 
-      <div className="page">
-        <a className="skip-link" href="#content">
-          Skip to content
-        </a>
+      <a className="skip-link" href="#content">
+        Skip to content
+      </a>
 
+      <nav className="topbar" aria-label="Primary">
+        <div className="topbar__inner">
+          <a className="topbar__name" href="#top">
+            Anabelle Handdoek
+          </a>
+          <ul>
+            {nav.map((item) => (
+              <li key={item.href}>
+                <a href={item.href}>{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </nav>
+
+      <div className="page" id="top">
         <header className="hero">
-          <div className="hero__intro">
-            <p className="eyebrow">Senior Software Architect</p>
-            <h1 className="title">Anabelle Handdoek</h1>
-            <p className="subtitle">
-              Two decades shipping accessible, secure, and high-performance web
-              applications. Trusted by global brands to lead technical direction
-              where quality, compliance, and user experience converge.
-            </p>
-            <p className="subtitle">
-              Founder of 8manos. Creator of award-winning platforms including
-              Colombia&apos;s Peace Process Open Library. Currently architecting
-              omni-channel experiences at Publicis Groupe for 120M+ users.
-            </p>
-            <p className="subtitle">
-              Deep expertise in React, Next.js, TypeScript, accessibility
-              (WCAG/ARIA), and security (OWASP). Passionate about FOSS, AI
-              agents, web3, and building technology that matters.
-            </p>
-            <div className="hero__actions">
-              <a className="button" href="mailto:ana@8manos.com">
-                Start a Conversation
-              </a>
-              <a className="button button--ghost" href="#experience">
-                View Experience
-              </a>
+          <p className="eyebrow">
+            <span className="status-dot" aria-hidden="true" />
+            Senior Software Architect · Bogotá
+          </p>
+          <h1 className="title">
+            Anabelle <em>Handdoek</em>
+          </h1>
+
+          <div className="hero__grid">
+            <div className="hero__intro">
+              <p className="lead">
+                Two decades shipping accessible, secure, and high-performance
+                web applications. Trusted by global brands to lead technical
+                direction where quality, compliance, and user experience
+                converge.
+              </p>
+              <p>
+                Founder of 8manos. Creator of award-winning platforms including
+                Colombia&apos;s Peace Process Open Library. Currently
+                architecting omni-channel experiences at Publicis Groupe for
+                120M+ users.
+              </p>
+              <p>
+                Deep expertise in React, Next.js, TypeScript, accessibility
+                (WCAG/ARIA), and security (OWASP). Passionate about FOSS, AI
+                agents, web3, and building technology that matters.
+              </p>
+              <div className="hero__actions">
+                <a className="button" href="mailto:ana@8manos.com">
+                  Start a conversation
+                  <span aria-hidden="true">→</span>
+                </a>
+                <a className="button button--ghost" href="#experience">
+                  View experience
+                </a>
+              </div>
             </div>
+
+            <aside className="hero__aside" aria-label="Contact details">
+              <div className="portrait">
+                <Image
+                  src="/images/pixel_avatar.png"
+                  alt="Pixel Survivor avatar"
+                  width={226}
+                  height={224}
+                  priority
+                />
+              </div>
+              <dl className="facts">
+                <div>
+                  <dt>Location</dt>
+                  <dd>Bogotá, Colombia</dd>
+                </div>
+                <div>
+                  <dt>E-mail</dt>
+                  <dd>
+                    <a href="mailto:ana@8manos.com">ana@8manos.com</a>
+                  </dd>
+                </div>
+                <div>
+                  <dt>Languages</dt>
+                  <dd>
+                    <ul>
+                      {languages.map((language) => (
+                        <li key={language}>{language}</li>
+                      ))}
+                    </ul>
+                  </dd>
+                </div>
+              </dl>
+            </aside>
           </div>
 
-          <div className="hero__aside">
-            <div className="portrait">
-              <Image
-                src="/images/pixel_avatar.png"
-                alt="Pixel Survivor avatar"
-                width={226}
-                height={224}
-                priority
-              />
-            </div>
-            <div className="contact-card">
-              <div>
-                <span className="label">Location</span>
-                <p>Bogotá, Colombia</p>
-              </div>
-              <div>
-                <span className="label">E-mail</span>
-                <a href="mailto:ana@8manos.com">ana@8manos.com</a>
-              </div>
-              <div>
-                <span className="label">Languages</span>
-                <ul>
-                  {languages.map((language) => (
-                    <li key={language}>{language}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
+          <ul className="stats" aria-label="At a glance">
+            {achievements.map((achievement) => (
+              <li key={achievement.label} className="stat">
+                <span className="stat__label">{achievement.label}</span>
+                <span className="stat__description">
+                  {achievement.description}
+                </span>
+              </li>
+            ))}
+          </ul>
         </header>
 
         <main id="content" className="content">
-          <section className="section">
-            <div className="section__header">
-              <h2>At a Glance</h2>
-              <p>Proven impact across enterprise-scale platforms.</p>
-            </div>
-            <div className="stats">
-              {achievements.map((achievement) => (
-                <div key={achievement.label} className="stat">
-                  <span className="stat__label">{achievement.label}</span>
-                  <span className="stat__description">
-                    {achievement.description}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section className="section section--accent">
-            <div className="section__header">
-              <h2>Expertise</h2>
-              <p>Daily practice across the full product lifecycle.</p>
-            </div>
+          <Section
+            index="01"
+            title="Expertise"
+            intro="Daily practice across the full product lifecycle."
+          >
             <div className="skills-grid">
               {skills.map((skill) => (
-                <div key={skill.title} className="skill-card">
+                <div key={skill.title} className="skill">
                   <h3>{skill.title}</h3>
                   <ul>
                     {skill.items.map((item) => (
@@ -351,122 +411,121 @@ const IndexPage = () => {
                 </div>
               ))}
             </div>
-          </section>
+          </Section>
 
-          <section id="experience" className="section">
-            <div className="section__header">
-              <h2>Experience</h2>
-              <p>
-                Leading technical direction, mentoring engineers, and delivering
-                global-scale digital products.
-              </p>
-            </div>
-            <div className="experience-list">
+          <Section
+            id="experience"
+            index="02"
+            title="Experience"
+            intro="Leading technical direction, mentoring engineers, and delivering global-scale digital products."
+          >
+            <ol className="timeline">
               {experience.map((item) => (
-                <article
-                  key={`${item.company}-${item.role}`}
-                  className="experience"
-                >
-                  <div className="experience__meta">
-                    <div>
-                      <h3>{item.role}</h3>
-                      <p className="experience__company">{item.company}</p>
-                    </div>
-                    <span className="experience__period">{item.period}</span>
+                <li key={`${item.company}-${item.role}`} className="role">
+                  <span className="role__period">{item.period}</span>
+                  <div className="role__body">
+                    <h3>{item.role}</h3>
+                    <p className="role__company">{item.company}</p>
+                    <p className="role__summary">{item.summary}</p>
+                    <ul>
+                      {item.bullets.map((bullet) => (
+                        <li key={bullet}>{bullet}</li>
+                      ))}
+                    </ul>
                   </div>
-                  <p className="experience__summary">{item.summary}</p>
-                  <ul>
-                    {item.bullets.map((bullet) => (
-                      <li key={bullet}>{bullet}</li>
+                </li>
+              ))}
+            </ol>
+          </Section>
+
+          <Section
+            id="work"
+            index="03"
+            title="Featured Work"
+            intro="Flagship platforms with national and international reach."
+          >
+            <ul className="rows">
+              {featured.map((item) => (
+                <li key={item.href}>
+                  <a
+                    className="row"
+                    href={item.href}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span className="row__title">{item.title}</span>
+                    <span className="row__desc">{item.description}</span>
+                    <span className="row__arrow" aria-hidden="true">
+                      ↗
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </Section>
+
+          <Section
+            id="projects"
+            index="04"
+            title="Personal Projects"
+            intro="Autonomous systems, experimental games, and real-time platforms."
+          >
+            <div className="project-grid">
+              {projects.map((project) => (
+                <article key={project.title} className="project">
+                  <a
+                    className="project__image"
+                    href={project.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    tabIndex={-1}
+                    aria-hidden="true"
+                  >
+                    <Image
+                      src={project.image}
+                      alt=""
+                      width={project.width}
+                      height={project.height}
+                      sizes="(max-width: 720px) 100vw, 360px"
+                    />
+                  </a>
+                  <h3>
+                    <a href={project.href} target="_blank" rel="noreferrer">
+                      {project.title}
+                      <span aria-hidden="true"> ↗</span>
+                    </a>
+                  </h3>
+                  <p>{project.description}</p>
+                  <ul className="tag-list" aria-label="Technologies">
+                    {project.tags.map((tag) => (
+                      <li key={tag}>{tag}</li>
                     ))}
                   </ul>
                 </article>
               ))}
             </div>
-          </section>
+          </Section>
 
-          <section className="section">
-            <div className="section__header">
-              <h2>Featured Work</h2>
-              <p>Flagship platforms with national and international reach.</p>
-            </div>
-            <div className="featured-grid">
-              {featured.map((item) => (
-                <a
-                  key={item.href}
-                  className="featured-card"
-                  href={item.href}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                  <span className="featured-link">{item.href}</span>
-                </a>
-              ))}
-            </div>
-          </section>
-
-          <section className="section section--grid">
-            <div className="section__header">
-              <h2>Personal Projects</h2>
-              <p>
-                Autonomous systems, experimental games, and real-time platforms.
-              </p>
-            </div>
-            <div className="project-grid">
-              {projects.map((project) => (
-                <article key={project.title} className="project-card">
-                  <div className="project-card__image">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      width={project.width}
-                      height={project.height}
-                    />
-                  </div>
-                  <div className="project-card__body">
-                    <h3>{project.title}</h3>
-                    <p>{project.description}</p>
-                    <ul className="tag-list">
-                      {project.tags.map((tag) => (
-                        <li key={tag}>{tag}</li>
-                      ))}
-                    </ul>
-                    <a
-                      className="project-link"
-                      href={project.href}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Visit Project
-                    </a>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </section>
-
-          <section className="section section--accent">
-            <div className="section__header">
-              <h2>Recognition</h2>
-              <p>Selected awards and industry acknowledgment.</p>
-            </div>
-            <div className="awards">
+          <Section
+            index="05"
+            title="Recognition"
+            intro="Selected awards and industry acknowledgment."
+          >
+            <ul className="rows rows--static">
               {awards.map((item) => (
-                <div key={item.title} className="award-card">
-                  <h3>{item.title}</h3>
-                  <p>{item.detail}</p>
-                </div>
+                <li key={item.title} className="row">
+                  <span className="row__title">{item.title}</span>
+                  <span className="row__desc">{item.detail}</span>
+                </li>
               ))}
-            </div>
-          </section>
+            </ul>
+          </Section>
 
-          <section className="section section--grid">
-            <div className="section__header">
-              <h2>Education & Certifications</h2>
-              <p>Continuous investment in craft and leadership.</p>
-            </div>
+          <Section
+            index="06"
+            title="Education"
+            intro="Continuous investment in craft and leadership."
+          >
             <ul className="two-column">
               {education.map((item) => (
                 <li key={`${item.title}-${item.org}`}>
@@ -475,25 +534,30 @@ const IndexPage = () => {
                 </li>
               ))}
             </ul>
-          </section>
+          </Section>
 
-          <section className="section">
-            <div className="section__header">
-              <h2>Connect</h2>
-              <p>Find me across platforms.</p>
-            </div>
-            <div className="links">
+          <section
+            id="contact"
+            className="contact"
+            aria-labelledby="contact-title"
+          >
+            <span className="section__index">07</span>
+            <h2 id="contact-title" className="contact__title">
+              Let&apos;s build something <em>that matters.</em>
+            </h2>
+            <a className="contact__email" href="mailto:ana@8manos.com">
+              ana@8manos.com
+            </a>
+            <ul className="links">
               {links.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {link.label}
-                </a>
+                <li key={link.href}>
+                  <a href={link.href} target="_blank" rel="noreferrer">
+                    {link.label}
+                    <span aria-hidden="true"> ↗</span>
+                  </a>
+                </li>
               ))}
-            </div>
+            </ul>
           </section>
         </main>
 
