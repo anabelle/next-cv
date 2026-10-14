@@ -118,13 +118,6 @@ const projects: Project[] = [
     repo: 'https://github.com/anabelle/acars.pub',
   },
   {
-    title: 'Bombolo',
-    description:
-      'Site and public climate observatory for a native Andean tree nursery in Tenjo: static site on Cloudflare Pages plus a live weather service, from sensor sender to SQLite API and dashboard, that never shows stale data as current.',
-    tags: ['Cloudflare Pages', 'Python', 'SQLite', 'IoT'],
-    href: 'https://bombolo.bio',
-  },
-  {
     title: 'TetrisTwist',
     description:
       '3D Tetris in Three.js/WebGL with physics simulation, smooth transforms, and responsive touch controls.',
@@ -490,7 +483,7 @@ const IndexPage = () => {
               <p className="agentic__note">
                 Built in an independent lab and applied in client delivery (see{' '}
                 <a href="#experience">Experience</a>). Public work:{' '}
-                <a href="#projects">Pixel Survivor, ACARS, and Bombolo</a>, plus
+                <a href="#projects">Pixel Survivor and ACARS</a>, plus
                 source on{' '}
                 <a
                   href="https://github.com/anabelle"
