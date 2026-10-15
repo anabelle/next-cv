@@ -894,3 +894,43 @@ a.row:hover .row__arrow {
     animation-duration: 0.01ms !important;
   }
 }
+
+/* ---------- Minimal home (heyanabelle.com root) ---------- */
+
+.home-sub {
+  color: var(--muted);
+  font-family: var(--font-serif);
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  max-width: 34ch;
+}
+
+.home-links {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: clamp(1rem, 2vw, 1.15rem);
+}
+
+.home-links a {
+  display: inline-block;
+  padding: 6px 0;
+  color: var(--text);
+}
+
+.home-links a:hover {
+  color: var(--accent);
+}
+
+.page {
+  padding: clamp(48px, 10vh, 120px) var(--gutter);
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.hero .title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.6rem, 8vw, 5.5rem);
+  line-height: 1.05;
+  font-weight: 400;
+}
