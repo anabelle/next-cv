@@ -706,6 +706,10 @@ a.row:hover .row__arrow {
   color: var(--muted);
 }
 
+.stack {
+  margin-top: 40px;
+}
+
 /* Education */
 
 .two-column {
