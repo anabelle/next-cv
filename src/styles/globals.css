@@ -300,9 +300,7 @@ em {
 .facts dt,
 .section__index,
 .role__period,
-.stat__description,
-.tag-list li,
-.item-subtitle {
+.tag-list li {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   color: var(--faint);
@@ -321,39 +319,6 @@ em {
 
 .facts a:hover {
   text-decoration-color: currentColor;
-}
-
-/* Stats */
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin-top: clamp(56px, 8vw, 96px);
-  border-top: 1px solid var(--rule-strong);
-}
-
-.stat {
-  display: grid;
-  gap: 6px;
-  padding: 20px 20px 0 0;
-}
-
-.stat + .stat {
-  padding-left: 20px;
-  border-left: 1px solid var(--rule);
-}
-
-.stat__label {
-  font-family: var(--font-serif);
-  font-size: clamp(1.75rem, 3.2vw, 2.5rem);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-}
-
-.stat__description {
-  font-size: 0.8125rem;
-  color: var(--muted);
-  line-height: 1.45;
 }
 
 /* ---------- Sections ---------- */
@@ -387,107 +352,9 @@ em {
   text-wrap: balance;
 }
 
-.section__header p {
-  color: var(--muted);
-  font-size: 0.9375rem;
-  max-width: 32ch;
-}
-
 .section__body {
   min-width: 0;
   border-top: 1px solid var(--rule-strong);
-}
-
-/* Skills */
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 32px;
-  padding-top: 24px;
-}
-
-.skill h3 {
-  font-size: 0.9375rem;
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-
-.skill ul {
-  display: grid;
-  gap: 8px;
-  color: var(--muted);
-  font-size: 0.9375rem;
-}
-
-/* Agentic engineering */
-
-.agentic {
-  display: grid;
-  gap: 28px;
-  padding-top: 24px;
-}
-
-.agentic__lead {
-  font-family: var(--font-serif);
-  font-size: clamp(1.625rem, 2.8vw, 2.25rem);
-  line-height: 1.15;
-  letter-spacing: -0.015em;
-  text-wrap: pretty;
-}
-
-.agentic__focus {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  counter-reset: focus;
-}
-
-.agentic__focus li {
-  display: grid;
-  gap: 8px;
-  align-content: start;
-  padding: 20px;
-  border-radius: 12px;
-  background: color-mix(in srgb, var(--accent) 7%, var(--bg));
-  border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
-  counter-increment: focus;
-}
-
-.agentic__focus h3 {
-  font-size: 0.9375rem;
-  font-weight: 600;
-}
-
-.agentic__focus h3::before {
-  content: counter(focus, decimal-leading-zero);
-  display: block;
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 400;
-  color: var(--accent);
-  margin-bottom: 8px;
-}
-
-.agentic__focus p {
-  color: var(--muted);
-  font-size: 0.9375rem;
-}
-
-.agentic__note {
-  color: var(--faint);
-  font-size: 0.875rem;
-}
-
-.agentic__note a {
-  color: var(--text);
-  text-decoration: underline;
-  text-decoration-color: var(--rule-strong);
-  text-underline-offset: 3px;
-}
-
-.agentic__note a:hover {
-  color: var(--accent);
 }
 
 /* Experience timeline */
@@ -520,11 +387,6 @@ em {
   color: var(--accent);
   font-size: 0.9375rem;
   margin-top: 2px;
-}
-
-.role__summary {
-  margin-top: 12px;
-  color: var(--text);
 }
 
 .role__body ul {
@@ -710,32 +572,6 @@ a.row:hover .row__arrow {
   margin-top: 40px;
 }
 
-/* Education */
-
-.two-column {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  column-gap: 32px;
-}
-
-.two-column li {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 16px;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--rule);
-}
-
-.item-title {
-  font-weight: 500;
-}
-
-.item-subtitle {
-  text-align: right;
-  flex-shrink: 0;
-}
-
 /* ---------- Contact ---------- */
 
 .contact {
@@ -817,26 +653,8 @@ a.row:hover .row__arrow {
     position: static;
   }
 
-  .stats {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .stat:nth-child(3) {
-    padding-left: 0;
-    border-left: 0;
-  }
-
-  .stat:nth-child(n + 3) {
-    margin-top: 20px;
-    border-top: 1px solid var(--rule);
-  }
-
   .project-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .agentic__focus {
-    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -859,10 +677,7 @@ a.row:hover .row__arrow {
     justify-content: center;
   }
 
-  .skills-grid,
-  .agentic__focus,
-  .project-grid,
-  .two-column {
+  .project-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 
