@@ -99,6 +99,16 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: 'ACARS — Airline Management MMO',
+    description:
+      'Open-source, decentralised airline simulation MMO backed by the Nostr protocol. Build and operate a virtual carrier competing on 6,072 real-world routes using deterministic O(1) economics (Gravity Model, QSI market share). 1:1 real-time — a 7-hour flight takes 7 real hours. Zero central database: all state is a cryptographically signed, relay-backed reduction of Nostr events.',
+    tags: ['Nostr', 'React 19', 'TypeScript', 'MapLibre GL', 'Monorepo'],
+    image: '/images/acars.png',
+    width: 1232,
+    height: 950,
+    href: 'https://acars.pub',
+  },
+  {
     title: 'Pixel Survivor',
     description:
       'Autonomous, Bitcoin-native AI artist with a public Lightning canvas. Its agent brain runs on Pi agent-core across platforms, overseen by Syntropy, an orchestrator that delegates code changes to ephemeral worker agents.',
